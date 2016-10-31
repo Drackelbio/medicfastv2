@@ -53,7 +53,7 @@ app
     .state("auths.system.categoria", {
         url: "/categoria",
         data: { section: 'System', page: 'Categoría' },
-        templateUrl: "ioteca_web_apps/auths/views/categoria/index.html"
+        templateUrl: "medicfast_web_apps/auths/views/categoria/index.html"
     })
 
     .state('auths.hierarchy', {
@@ -64,18 +64,18 @@ app
      .state("auths.hierarchy.hierarchy_type", {
         url: "/hierarchy_type",
         data: { section: 'Hierarchys', page: 'Hierarchy Type' },
-        templateUrl: "ioteca_web_apps/auths/views/hierarchy_type/index.html"
+        templateUrl: "medicfast_web_apps/auths/views/hierarchy_type/index.html"
     })
 
     .state("auths.system.permission", {
         url: "/permission",
         data: { section: 'System', page: 'Permisos' },
-        templateUrl: "ioteca_web_apps/auths/views/permission/index.html"
+        templateUrl: "medicfast_web_apps/auths/views/permission/index.html"
     })
     .state("auths.system.contenttype", {
         url: "/contenttype",
         data: { section: 'System', page: 'Aplicaciones' },
-        templateUrl: "ioteca_web_apps/auths/views/contenttype/index.html"
+        templateUrl: "medicfast_web_apps/auths/views/contenttype/index.html"
     })
 
     //==================================
@@ -85,7 +85,7 @@ app
     .state("auths.system.menu", {
         url: "/menu",
         data: { section: 'System', page: 'Menú' },
-        templateUrl: "ioteca_web_apps/auths/views/menu/index.html",
+        templateUrl: "medicfast_web_apps/auths/views/menu/index.html",
 
         settings: {
             //loginRequired: true,

@@ -26,7 +26,7 @@ app
         //title: 'Sección ui',
         //type: 'heading',
         menu: [{
-            title: 'U.I.',
+            title: 'MANTENIMIENTO',
             type: 'toggle',
             state: 'ui',
             menu_items: [{
@@ -60,7 +60,7 @@ app
     sections.push({
 
         menu: [{
-            title: 'System',
+            title: 'REPORTES',
             type: 'toggle',
             state: 'auths.system',
             menu_items: [{
