@@ -35,7 +35,7 @@ app
             //loginRequired: true,
             //roles: ['User'],
         },
-        templateUrl: "ioteca_web_apps/ui/views/tests/test1.html",
+        templateUrl: "medicfast_web_apps/ui/views/tests/test1.html",
         resolve: {
             //checkSecurity: checkSecurity,
         },
@@ -48,7 +48,7 @@ app
     .state("ui.test2", {
         url: "/test2",
         data: { page: 'Test 2' },
-        templateUrl: "ioteca_web_apps/ui/views/tests/test2.html",
+        templateUrl: "medicfast_web_apps/ui/views/tests/test2.html",
         resolve: {
             //checkSecurity: checkSecurity,
         },
@@ -64,7 +64,7 @@ app
     .state("ui.test3", {
         url: "/test3",
         data: { page: 'Test 3' },
-        templateUrl: "ioteca_web_apps/ui/views/tests/test3.html"
+        templateUrl: "medicfast_web_apps/ui/views/tests/test3.html"
     })
 
     //==================================
@@ -73,7 +73,7 @@ app
     .state("ui.test4", {
         url: "/test4",
         data: { section: 'UI', page: 'Test 4' },
-        templateUrl: "ioteca_web_apps/ui/views/tests/test4.html"
+        templateUrl: "medicfast_web_apps/ui/views/tests/test4.html"
     })
     //==================================
     // test5pagination
@@ -81,7 +81,7 @@ app
     .state("ui.test5", {
         url: "/test5",
         data: { section: 'UI', page: 'Test 5' },
-        templateUrl: "ioteca_web_apps/ui/views/tests/test5pagination.html"
+        templateUrl: "medicfast_web_apps/ui/views/tests/test5pagination.html"
     })
     //==================================
     // test6directivas
@@ -89,7 +89,7 @@ app
     .state("ui.dir", {
         url: "/dir",
         data: { section: 'UI', page: 'Test 6 directivas' },
-        templateUrl: "ioteca_web_apps/ui/views/tests/test6dir.html"
+        templateUrl: "medicfast_web_apps/ui/views/tests/test6dir.html"
     })
 
 

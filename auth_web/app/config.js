@@ -1,6 +1,6 @@
 ﻿var baseUrl = 'http://localhost:9001/';
 var loginUrl = 'http://localhost:9000/auth_web/';
-var iotecaUrl = 'http://localhost:9000/ioteca_web/';
+var iotecaUrl = 'http://localhost:9000/medicfast_web/';
 
 
 var client_id = 'I2oDvNlk4BxRuUzibhPdDrT6FwFFs20ZXfzB3kpC';
