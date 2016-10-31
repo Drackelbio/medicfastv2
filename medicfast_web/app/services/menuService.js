@@ -17,8 +17,8 @@ app
     ];
 
     sections.push({
-        title: 'Dashboard',
-        state: 'app.dashboard',
+        title: 'INICIO',
+        state: 'app.inicio',
         type: 'link'
     });
 

@@ -62,12 +62,12 @@ app
     //==================================
     // dashboard page
     //==================================
-    .state("app.dashboard", {
-        url: "/dashboard",
-        data: { page: 'Dashboard page' },
+    .state("app.inicio", {
+        url: "/inicio",
+        data: { page: 'Inicio page' },
         views: {
             '': {
-                templateUrl: "app/views/pages/dashboard.wall.html"
+                templateUrl: "app/views/pages/inicio.wall.html"
             },
         }
     })
