@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+    <meta charset="UTF-8">
+    <title ng-bind="$state.current.data.section + ($state.current.data.section === Null ? '' : ' > ') +
+        $state.current.data.page">
+    </title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <meta name="viewport" content="initial-scale=1" />
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" type="text/css" />
+    <link rel="stylesheet" href="bower_components/angular-material-icons/angular-material-icons.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="bower_components/angular-toastr/dist/angular-toastr.css" />
+
+    <link rel="stylesheet" href="static/styles/app.css" type="text/css" />
+</head>
+
+<body>
+    <div  ui-view ng-controller="AppCtrl"></div>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.min.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="bower_components/angular-material/angular-material.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+    <script src="bower_components/angular-material-icons/angular-material-icons.min.js"></script>
+    <script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
+    <script type="text/javascript" src="bower_components/angular-toastr/dist/angular-toastr.tpls.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/config.js"></script>
+    <script src="app/router.js"></script>
+    <script src="app/controllers/app.js"></script>
+
+    <script src="auth_web_apps/access/controllers/login.js"></script>
+    <script src="auth_web_apps/access/services/loginService.js"></script>
+    <script src="auth_web_apps/access/router.js"></script>
+</body>
+
+</html>

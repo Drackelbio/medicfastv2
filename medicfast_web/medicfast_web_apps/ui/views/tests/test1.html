@@ -1,0 +1,96 @@
+<div ng-cloak>
+    <md-content class="md-padding" layout-xs="column">
+        <div flex-xs flex-gt-xs>
+            <md-card ng-controller="NomCtrl">
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-headline">Trabajar con x</span>
+                        <span class="md-subhead">CRUD x</span>
+                    </md-card-title-text>
+                </md-card-title>
+                <md-card-content layout="row" layout-align="space-between">
+                    <div>
+                        <form name="userForm">
+                            <div layout-gt-sm="row">
+                                <md-input-container class="md-block" flex-gt-sm>
+                                    <label>Name</label>
+                                    <input ng-model="nombre">
+                                </md-input-container>
+                            </div>
+                        </form>
+                    </div>
+                </md-card-content>
+                <md-card-actions layout="row" layout-align="end center" layout-wrap>
+                    <md-icon md-svg-src="md-toggle-arrow" aria-label="title"></md-icon>
+                    <ng-md-icon icon="apple" size="24"></ng-md-icon>
+                    <span flex></span>
+                    <md-button class="md-raised">Button</md-button>
+                    <md-button class="md-raised md-primary" ng-click="save()">Save</md-button>
+                    <md-button ng-disabled="true" class="md-raised md-primary">Disabled</md-button>
+                    <md-button class="md-raised md-warn">Warn</md-button>
+                </md-card-actions>
+                <md-divider></md-divider>
+                <md-card-actions layout="row" layout-align="start center" layout-xs="column">
+                    <md-card-icon-actions>
+                        <md-button class="md-fab md-mini md-primary" aria-label="Add" ng-click="new()">
+                            <ng-md-icon icon="add" aria-label="title"></ng-md-icon>
+                        </md-button>
+                        <md-button class="md-icon-button" aria-label="Favorite">
+                            <ng-md-icon icon="add" aria-label="title"></ng-md-icon>
+                        </md-button>
+                        <md-button class="md-icon-button" aria-label="Share">
+                            <ng-md-icon icon="share-arrow" aria-label="title"></ng-md-icon>
+                        </md-button>
+                    </md-card-icon-actions>
+                    <span flex></span>
+                    <md-card-icon-actions layout-align="end center">
+                        <md-button class="md-icon-button" aria-label="Share">
+                            <ng-md-icon icon="more_vert" aria-label="title"></ng-md-icon>
+                        </md-button>
+                    </md-card-icon-actions>
+                </md-card-actions>
+                <md-divider></md-divider>
+                <table md-table data-md-row-select="">
+                    <thead md-head>
+                        <tr md-row>
+                            <th md-column>#</th>
+                            <th md-column md:order:by="name">nombre</th>
+                            <th md-column>codigo</th>
+                            <th md-column colspan='2' align='center'>acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody md-body>
+                        <tr md-row ng-repeat="d in lista | filter: nombre">
+                            <td md-cell> {{ d.num }}</td>
+                            <td md-cell> {{ d.nombre }}</td>
+                            <td md-cell> {{ d.codigo }}</td>
+                            <td md-cell> <a href="" ng-click="sel(d)">Edit</a> </td>
+                            <td md-cell> <a href="" ng-click="delete(d)">Delete</a> </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </md-card>
+        </div>
+        <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+            <md-button class="md-fab" aria-label="Eat cake">
+                <ng-md-icon icon="android" aria-label="title"></ng-md-icon>
+            </md-button>
+            <md-button class="md-fab md-primary" aria-label="Use Android">
+                <ng-md-icon icon="add" aria-label="title"></ng-md-icon>
+            </md-button>
+            <md-button class="md-fab" ng-disabled="true" aria-label="Comment">
+                <ng-md-icon icon="android" aria-label="title"></ng-md-icon>
+            </md-button>
+            <md-button class="md-fab md-primary md-hue-2" aria-label="Profile">
+                <ng-md-icon icon="android" aria-label="title"></ng-md-icon>
+            </md-button>
+            <md-button class="md-fab md-mini" aria-label="Eat cake">
+                <ng-md-icon icon="android" aria-label="title"></ng-md-icon>
+            </md-button>
+            <md-button class="md-fab md-mini md-primary" aria-label="Use Android">
+                <ng-md-icon icon="android" aria-label="title" style="color: greenyellow;"></ng-md-icon>
+            </md-button>
+            <div class="label">FAB</div>
+        </section>
+    </md-content>
+</div>

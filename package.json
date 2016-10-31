@@ -1,0 +1,19 @@
+{
+    "name": "medicfast",
+    "version": "1.0.0",
+    "description": "desc",
+    "main": "gulpfile.js",
+    "dependencies": {
+        "gulp": "^3.9.0",
+        "gulp-connect": "^2.3.1"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "test": "runserver"
+    },
+    "keywords": [
+        "gulp"
+    ],
+    "author": "centro-medico",
+    "license": "ISC"
+}

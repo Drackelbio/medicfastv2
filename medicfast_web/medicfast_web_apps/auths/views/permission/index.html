@@ -1,0 +1,142 @@
+<div ng-cloak>
+    <md-content class="md-padding" layout-xs="column">
+        <div flex-xs flex-gt-xs>
+            <md-card ng-controller="PermissionCtrl">
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-headline">Trabajar con Permission</span>
+                        <span class="md-subhead">CRUD Permission</span>
+                    </md-card-title-text>
+                </md-card-title>
+                
+                <md-divider></md-divider>
+                <md-table-container>
+                    <md-progress-linear layout-fill md-mode="indeterminate" ng-hide="!isLoading"></md-progress-linear>
+                    <table table-responsive>
+                        <md-card-actions layout="row" layout-align="start center" layout-xs="column">
+                            <md-card-icon-actions>
+                                <md-button class="md-icon-button" aria-label="Add" ng-click="new($event)">
+                                    <md-tooltip md-autohide>Add</md-tooltip>
+                                    <ng-md-icon icon="add" aria-label="Add"></ng-md-icon>
+                                </md-button>
+                            </md-card-icon-actions>
+                            <span flex></span>
+                            <md-card-icon-actions layout-align="end center">
+                                <input placeholder="buscar" ng-model="query" ng-keyup="buscar()">
+                                <md-button class="md-icon-button" aria-label="Share">
+                                    <ng-md-icon icon="more_vert" aria-label="title"></ng-md-icon>
+                                </md-button>
+                            </md-card-icon-actions>
+                        </md-card-actions>
+                        <md-divider></md-divider>
+                        <thead  md-on-reorder="onReorder">
+                            <tr>
+                                <th>#</th>
+                                <th class="col-hidden" data-search="codename" data-order="codename">code name</th>
+                                <th class="col-hidden" data-search="name" data-order="name">name perm</th>
+                                <th>app_label</th>
+                                <th colspan='2' class="align-options">acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="d in lista">
+                                <td>{{ (options.page - 1) * options.page_size +$index +1 }}</td>
+                                <td> {{ d.codename }}</td>
+                                <td> {{ d.name }}</td>
+                                <td> {{ d.content_type }} esdf sasd</td>
+                                <td>
+                                    <md-button class="md-icon-button" aria-label="Edit" ng-click="sel(d)">
+                                        <md-tooltip md-autohide>Edit {{ d.codename }}</md-tooltip>
+                                        <ng-md-icon icon="edit" aria-label="Edit"></ng-md-icon>
+                                    </md-button>
+                                </td>
+                                <td>
+                                    <md-button class="md-icon-button" aria-label="delete" ng-click="delete(d)">
+                                        <md-tooltip md-autohide>Delete {{ d.codename }}</md-tooltip>
+                                        <ng-md-icon icon="delete" aria-label="delete"></ng-md-icon>
+                                    </md-button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table table-responsive>
+                        <caption>The Films of Hayao Miyazaki</caption>
+                        <thead md-on-reorder="onReorder">
+                            <tr>
+                                <th rowspan='2'>#</th>
+                                <th colspan='3'>Year dsadasd wwwww</th>
+                                <th rowspan='2' class="col-hidden" data-search="Film" data-order="Film">Film</th>
+                                <th rowspan='2'>Action</th>
+                                <th colspan='2'>Ejem</th>
+                                <th rowspan='2'>Honor</th>
+                            </tr>
+                            <tr>
+                                <th>Year1</th>
+                                <th>Year2</th>
+                                <th>Year3</th>
+                                <th class="col-hidden" data-search="Ejm1" data-order="Ejm1">Ejm1</th>
+                                <th class="col-hidden" data-search="Ejm2" data-order="Ejm2">Ejm2</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>My Neighbor Totoro (Best Animated Feature)</td>
+                                <td>1988</td>
+                                <td>1988d</td>
+                                <td>dsds</td>
+                                <td>aa</td>
+                                <td>eee1</td>
+                                <td>ee2</td>
+                                <td>Blue Ribbon Award ((Best Animated Feature))</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Princess Mononoke</td>
+                                <td>1997</td>
+                                <td>1988d</td>
+                                <td>dsds</td>
+                                <td>aa</td>
+                                <td>eee2</td>
+                                <td>ee2</td>
+                                <td>Nebula Award (Best Script)</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Spirited Away</td>
+                                <td>2001</td>
+                                <td>1988d</td>
+                                <td>dsds</td>
+                                <td>aa</td>
+                                <td>eee3</td>
+                                <td>ee2</td>
+                                <td>Academy Award (Best Animated Feature)</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Howl’s Moving Castle</td>
+                                <td>2004</td>
+                                <td>1988d</td>
+                                <td>dsds</td>
+                                <td>aa</td>
+                                <td>eee4</td>
+                                <td>ee2</td>
+                                <td>Hollywood Film Festival (Animation OTY)</td>
+                            </tr>
+                    </table>
+                </md-table-container>
+                <md-table-pagination>
+                    <table>
+                        <tfoot>
+                            <tr>
+                                <td>
+                                    <app-pagination ng-if="options.pages>0" per="options.page_size" page="options.page" format="{{'jumping'}}" display="4" rango="options.range" accion="list(params)" pages="options.pages" query="query" fields="{{fields}}"></app-pagination>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </md-table-pagination>
+            </md-card>
+        </div>
+    </md-content>
+</div>

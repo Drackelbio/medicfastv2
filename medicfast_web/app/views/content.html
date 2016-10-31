@@ -1,0 +1,111 @@
+<div class="box" md-theme="{{ dynamicTheme }}">
+    <!-- Content Navbar -->
+    <md-toolbar class="navbar md-whiteframe-z1 no-radius md-hue-2">
+        <div class="md-toolbar-tools">
+            <div hide-xs hide-sm ng-if="app.setting.asideFolded">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve" style="
+              width: 24px; height: 24px;">
+                <path d="M 92 80 L 50 0 L 50 100 Z" fill="rgba(139, 195, 74, 0.8)"></path>
+                <path d="M 8 80 L 50 0 L 50 100 Z" fill="#f3f3f3"></path>
+            </svg>
+            </div>
+            <md-button class="md-icon-button" hide-gt-sm aria-label="Toggle Menu" ng-click="openAside()">
+                <md-icon md-svg-src="md-menu"></md-icon>
+            </md-button>
+            <div layout="row" flex class="fill-height">
+                <h2 class="md-toolbar-item md-breadcrumb md-headline">
+              <span ng-if="$state.current.data.section">
+              <span hide-xs  ng-bind="$state.current.data.section"></span>
+              <span  ng-if="$state.current.data.section" class="docs-menu-separator-icon" hide-xs  style="transform: translate3d(0, 1px, 0)">
+                <span class="md-visually-hidden">-</span>
+                <md-icon 
+                aria-hidden="true"
+                md-svg-src="md-toggle-arrow" 
+                style="transform: rotate(90deg); 
+                -webkit-transform: rotate(90deg);"></md-icon>
+
+              </span>
+              </span>
+              <span class="md-breadcrumb-page" ng-bind="$state.current.data.page"></span>
+              </h2>
+                <span flex></span>
+                <!-- use up the empty space -->
+                <div class="md-toolbar-item " layout="row">
+                    <md-fab-actions class="md-toolbar-tools">
+                        <md-switch md-no-ink aria-label="Switch No Ink" ng-model="app.setting.asideFolded" hide-xs>
+                        </md-switch>
+                        <md-menu md-position-mode="target-right target">
+                            <md-button aria-label="Open demo menu" class="md-icon-button" ng-click="$mdOpenMenu($event)">
+                                <ng-md-icon icon="more_vert"></ng-md-icon>
+                            </md-button>
+                            <md-menu-content width="4">
+                                <md-menu-item>
+                                    
+                                    <md-button ng-click="logOut()">
+                                        <div layout="row">
+                                            <p flex>Salir</p>
+                                            <md-icon md-menu-align-target style="margin: auto 3px auto 0;"></md-icon>
+                                        </div>
+                                    </md-button>
+                                </md-menu-item>
+                            </md-menu-content>
+                        </md-menu>
+                        <md-button aria-label="photo" class="md-icon-button"  ui-sref="apps"> <!--ng-click="showGridBottomSheet()" -->
+                            <ng-md-icon icon="apps"></ng-md-icon>
+                        </md-button>
+                    </md-fab-actions>
+                </div>
+            </div>
+        </div>
+    </md-toolbar>
+    <!-- 
+  <md-content>
+    <md-toolbar md-theme="{{ dynamicTheme }}" class=" md-hue-2">
+      <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" hide-gt-sm aria-label="Toggle Menu" ng-click="openAside()">
+          <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+        </md-button>
+        <h2>
+          <span ng-if="$state.current.data.section">
+              <span hide-xs hide-sm hide-md ng-bind="$state.current.data.section">{{menu.currentSection.title}}</span>
+              <span  ng-if="$state.current.data.section" class="docs-menu-separator-icon" hide-xs hide-sm hide-md style="transform: translate3d(0, 1px, 0)">
+                <span class="md-visually-hidden">-</span>
+                <md-icon
+                    aria-hidden="true"
+                    md-svg-src="img/icons/ic_chevron_right_24px.svg"
+                    style="transform:translateY(-2px)"></md-icon>
+              </span>
+            </span>
+            <span class="md-breadcrumb-page" ng-bind="$state.current.data.page">{{menu.currentPage }}</span>
+        </h2>
+        <span flex></span>
+        <md-button class="md-icon-button"
+                       aria-label="View Source on Github"
+                       ng-if="!currentComponent.docs.length"
+                       target="_blank"
+                       ng-href="{{BUILDCONFIG.repository}}/{{menu.version.current.github}}">
+              <md-tooltip md-autohide>View Source on Github</md-tooltip>
+              <md-icon md-svg-src="img/icons/github.svg" style="color: rgba(255,255,255,0.97);"></md-icon>
+            </md-button>
+
+        <md-button class="md-icon-button" aria-label="Favorite">
+          <md-icon md-svg-icon="img/icons/favorite.svg" style="color: greenyellow;"></md-icon>
+        </md-button>
+        <md-button class="md-icon-button" aria-label="More">
+          <md-icon md-svg-icon="img/icons/more_vert.svg"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+    
+  </md-content>
+-->
+    <!-- / Content Navbar -->
+    <!-- Content -->
+    <div class="box-row">
+        <div class="box-cell">
+            <div class="box-inner md-scroll-y flex" ui-view>
+            </div>
+        </div>
+    </div>
+    <!-- / Content -->
+</div>

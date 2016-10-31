@@ -1,0 +1,20 @@
+<!-- 
+Type    Usage
+A   <div book></div>
+C   <div class="book"></div>
+E   <book data="book_data"></book>
+M   <!- - directive:book - ->
+
+-->
+
+<div ng-controller='xCtrl'>
+    <like-book like="likeFunction(star)" md-rows-page="[5, 10, 50 , 100 , 500, 1000]" md-limit="qryPag.limit"></like-book>
+</div>
+
+
+
+<app2-pagination per="[5, 10, 50 , 100 , 500, 1000]" page="options.page" format="'jumping'" display="4" rango="options.range" accion="list(params)" pages="options.pages" query="query">
+</app2-pagination>
+
+
+

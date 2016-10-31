@@ -1,0 +1,357 @@
+
+table {
+  width: 100%;
+  border-spacing: 0;
+  overflow: hidden;
+}
+ td, th {
+  padding: 15px 5px;
+  display: table-cell;
+  text-align: left;
+  border-radius: 2px;
+}
+
+
+.option-check-all{
+  width: 35px;
+}
+.option-check-all md-checkbox{
+  margin: 10px;
+  margin-top: -5px;
+  position: absolute;
+  /*width:15px;*/
+}
+
+.th-options{
+  margin-right: 10px;
+  /*position: absolute;*/
+}
+
+
+
+
+
+
+
+table thead + .md-table-progress md-progress-linear {
+  top: -3px;
+}
+table .md-table-progress th {
+  padding: 0;
+}
+table .md-table-progress th md-progress-linear {
+  height: 0;
+  transition: opacity 1s;
+}
+table .md-table-progress th md-progress-linear.ng-hide {
+  opacity: 0;
+}
+table .md-table-progress th md-progress-linear > .md-container {
+  height: 3px;
+  top: 0;
+  transition: none;
+}
+table .md-table-progress th md-progress-linear > .md-container > .md-bar {
+  height: 3px;
+}
+table th {
+  /*color: rgba(0, 0, 0, 0.54);*/
+  font-size: 12px;
+  font-weight: bold;
+  white-space: nowrap;
+  /*text-transform: uppercase;*/
+
+}
+table th {
+  cursor: pointer;
+}
+table th md-icon {
+  height: 16px;
+  width: 16px;
+  font-size: 16px !important;
+  line-height: 16px !important;
+}
+table th md-icon.md-sort-icon {
+  color: rgba(0, 0, 0, 0.26);
+  opacity: 0;
+  transition: -webkit-transform 0.25s, opacity 0.25s;
+  transition: transform 0.25s, opacity 0.25s;
+}
+table th md-icon.md-sort-icon.md-asc {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+table th md-icon.md-sort-icon.md-desc {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+table th md-icon:not(:first-child) {
+  margin-left: 8px;
+}
+table th md-icon:not(:last-child) {
+  margin-right: 8px;
+}
+table th.md-column.md-active,
+table th.md-column.md-active md-icon {
+  color: rgba(0, 0, 0, 0.87);
+}
+table th.md-column:hover md-icon.md-sort-icon,
+table th.md-column.md-active md-icon.md-sort-icon {
+  opacity: 1;
+}
+table tr.md-row[ng\:repeat].ng-leave,
+table tr.md-row[ng-repeat].ng-leave,
+table tr.md-row[x-ng-repeat].ng-leave,
+table tr.md-row[data-ng-repeat].ng-leave {
+  display: none;
+}
+table.md-row-select tbody.md-body > tr.md-row {
+  transition: background-color 0.2s;
+}
+table tbody > tr:not([disabled]):hover {
+  background-color: #eeeeee !important;
+}
+table.md-row-select tbody.md-body > tr.md-row.md-selected {
+  background-color: #f5f5f5;
+}
+table.md-row-select td.md-cell:first-child,
+table.md-row-select th.md-column:first-child {
+  width: 20px;
+  padding: 0 0 0 24px;
+}
+table.md-row-select td.md-cell:nth-child(2),
+table.md-row-select th.md-column:nth-child(2) {
+  padding: 0 24px;
+}
+table.md-row-select td.md-cell:nth-child(n+3):nth-last-child(n+2),
+table.md-row-select th.md-column:nth-child(n+3):nth-last-child(n+2) {
+  padding: 0 56px 0 0;
+}
+table:not(.md-row-select) td.md-cell:first-child,
+table:not(.md-row-select) th.md-column:first-child {
+  padding: 0 24px;
+}
+table:not(.md-row-select) td.md-cell:nth-child(n+2):nth-last-child(n+2),
+table:not(.md-row-select) th.md-column:nth-child(n+2):nth-last-child(n+2) {
+  padding: 0 56px 0 0;
+}
+table. td,
+table th {
+  vertical-align: middle;
+  text-align: left;
+}
+table td > *,
+table th > * {
+  vertical-align: middle;
+}
+table td:last-child,
+table th:last-child {
+  padding: 0 24px 0 0;
+}
+table td.md-clickable,
+table th.md-clickable {
+  cursor: pointer;
+}
+table td.md-clickable:focus,
+table th.md-clickable:focus {
+  outline: none;
+}
+table td.md-numeric,
+table th.md-numeric {
+  text-align: right;
+}
+table td md-checkbox,
+table th md-checkbox {
+  margin: 0;
+  width: 20px;
+}
+table td {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 13px;
+  border-top: 1px rgba(0, 0, 0, 0.12) solid;
+}
+table td.md-numeric md-select {
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+table td.md-numeric md-select .md-select-value {
+  -webkit-flex-grow: initial;
+      -ms-flex-positive: initial;
+          flex-grow: initial;
+}
+table td.md-placeholder {
+  color: rgba(0, 0, 0, 0.26);
+}
+table td md-select > .md-select-value > span.md-select-icon {
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  color: rgba(0, 0, 0, 0.54);
+  width: 18px;
+  text-align: right;
+}
+table td md-select > .md-select-value > span.md-select-icon:after {
+  -webkit-transform: scaleY(0.4) scaleX(0.8);
+          transform: scaleY(0.4) scaleX(0.8);
+}
+
+ 
+
+
+/* tabla responsiva opcion 1*/
+
+.responsive {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+@media only screen and (max-width: 800px) {
+
+    /* Force table to not be like tables anymore */
+    /* table.responsive,*/
+    .responsive thead,
+    .responsive tbody,
+    .responsive tr,
+    .responsive th {
+        display: block;
+    }
+
+    /* Hide table headers (but not display: none;, for accessibility) */
+    .responsive thead tr, .responsive th {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    .responsive tr {
+        border: 1px solid #ccc;
+    }
+
+    .responsive td:nth-child(odd), .responsive td:nth-child(even) {
+        /* Behave  like a "row" */
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+        white-space: normal;
+        text-align: left;
+
+        display: block;
+        -webkit-box-sizing: content-box;
+           -moz-box-sizing: content-box;
+                box-sizing: content-box;
+        min-height: 1em;
+    }
+
+    .responsive td:nth-child(odd)::before, .responsive td:nth-child(even)::before {
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        -ms-word-wrap: break-word;
+            word-wrap: break-word;
+        text-align: left;
+        font-weight: bold;
+        /*
+        Label the data
+        */
+        content: attr(data-title);
+    }
+    
+    .responsive td.responsive-omit-title:nth-child(odd), .responsive td.responsive-omit-title:nth-child(even) {
+        padding-left: 6px;
+    }
+
+    .responsive td.responsive-omit-title::before {
+        display: none;
+    }
+
+    .responsive td.responsive-omit-if-empty:empty {
+        display: none;
+    }
+}
+
+
+/* tabla responsiva opcion 2*/
+
+
+
+@media only screen and (max-width: 992px) {
+
+  table.core-responsive {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    display: block;
+    position: relative;
+    /* sort out borders */
+  }
+  table.core-responsive td:empty:before {
+    content: '\00a0';
+  }
+  table.core-responsive th,
+  table.core-responsive td {
+    margin: 0;
+    vertical-align: top;
+  }
+  table.core-responsive th {
+    text-align: left;
+  }
+  table.core-responsive thead {
+    display: block;
+    float: left;
+  }
+  table.core-responsive thead tr {
+    display: block;
+    padding: 0 10px 0 0;
+  }
+  table.core-responsive thead tr th::before { 
+    content: "\00a0";
+  }
+  table.core-responsive tbody {
+    display: block;
+    width: auto;
+    position: relative;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  table.core-responsive tbody tr {
+    display: inline-block;
+    vertical-align: top;
+  }
+  table.core-responsive th {
+    display: block;
+    text-align: right;
+  }
+  table.core-responsive td {
+    display: block;
+    min-height: 1.25em;
+    text-align: left;
+  }
+  table.core-responsive tr {
+    padding: 0 10px;
+  }
+  table.core-responsive thead {
+    border: 0;
+    border-right: 1px solid #d0d0d0;
+  }
+  table.core-responsive.bordered th {
+    border-bottom: 0;
+    border-left: 0;
+  }
+  table.core-responsive.bordered td {
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+  }
+  table.core-responsive.bordered tr {
+    border: 0;
+  }
+  table.core-responsive.bordered tbody tr {
+    border-right: 1px solid #d0d0d0;
+  }
+  
+}

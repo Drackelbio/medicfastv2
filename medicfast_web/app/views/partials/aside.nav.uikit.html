@@ -1,0 +1,135 @@
+<nav>
+    <ul class="nav">
+        <div ng-repeat="section in menu.sections">
+            
+            <div ng-repeat="menu in section.menu">
+                <li ng-if="menu.type === 'toggle'" ng-class="{'active toggled':$state.includes('{{menu.state}}')}">
+                    <a md-ink-ripple toggle-submenu>
+                        <span class="pull-right  ">
+                          <ng-md-icon icon="keyboard_arrow_down"></ng-md-icon>
+                        </span>
+                        <i class="icon mdi-action-subject i-20"></i>
+                        <span class="font-normal">{{menu.title}}</span>
+                    </a>
+                    <ul class="nav nav-sub" ng-repeat="menu_item in menu.menu_items">
+                        <li ui-sref-active="active">
+                            <a md-ink-ripple ui-sref="{{menu_item.state}}">{{menu_item.title}}</a>
+                        </li>
+                    </ul>
+                </li>
+                <li ui-sref-active="active" ng-if="menu.type === 'link'">
+                    <a md-ink-ripple ui-sref="{{menu.state}}">
+                        <span>{{menu.title}}</span>
+                    </a>
+                </li>
+            </div>
+            <li ui-sref-active="active" ng-if="section.type === 'link'">
+                <a md-ink-ripple ui-sref="{{section.state}}">
+                    <span>{{section.title}}</span>
+                </a>
+            </li>
+        </div>
+
+        <!--
+        <div>
+            <li class="nav-header m-v-sm hidden-folded">
+                <div>
+                    UI Kits
+                </div>
+            </li>
+            <div>
+                <li ng-class="{'active toggled':$state.includes('app')}">
+                    <a md-ink-ripple toggle-submenu>
+                        <span class="pull-right text-muted">
+                            <ng-md-icon icon="keyboard_arrow_down"></ng-md-icon>
+                        </span>
+                        <i class="icon mdi-action-subject i-20"></i>
+                        <span class="font-normal">Components</span>
+                    </a>
+                    <ul class="nav nav-sub">
+                        <li ui-sref-active="active">
+                            <a md-ink-ripple ui-sref="app.test1">Arrow</a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a md-ink-ripple ui-sref="app.test2">Badge &amp; Label</a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a md-ink-ripple ui-sref="ui.component.button">Button</a>
+                        </li>
+                    </ul>
+                </li>
+            </div>
+            <li ng-class="{active:$state.includes('ui.material')}">
+                <a md-ink-ripple toggle-submenu>
+                    <span class="pull-right text-muted">
+         <ng-md-icon icon="keyboard_arrow_down"></ng-md-icon>
+        </span>
+                    <i class="pull-right up"><b class="badge bg-success">14</b></i>
+                    <i class="icon mdi-image-flash-on i-20"></i>
+                    <span class="font-normal">Material</span>
+                </a>
+                <ul class="nav nav-sub">
+                    <li ui-sref-active="active">
+                        <a md-ink-ripple ui-sref="ui.material.button">Button</a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a md-ink-ripple ui-sref="ui.material.icon">Icon</a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a md-ink-ripple ui-sref="ui.material.color">Color</a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a md-ink-ripple ui-sref="ui.material.card">Card</a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a md-ink-ripple ui-sref="ui.material.form">Form</a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a md-ink-ripple ui-sref="ui.material.list">List</a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a md-ink-ripple ui-sref="ui.material.ngmaterial">NgMaterial</a>
+                    </li>
+                </ul>
+        </div>
+        <li class="b-b b m-v-sm"></li>
+        <li ui-sref-active="active">
+            <a md-ink-ripple ui-sref="app.getting-started">
+                <span>Settings</span>
+            </a>
+        </li>
+        <li ui-sref-active="active">
+            <a md-ink-ripple ui-sref="app.test1x">
+                <span>Document</span>
+            </a>
+        </li>
+        <li class="m-b-sm">
+            <a md-ink-ripple href="../html">
+                <span>HTML Version</span>
+            </a>
+        </li>
+        </li>
+        -->
+
+    </ul>
+</nav>
+<!--
+  <div ng-repeat="section in menu.sections">
+     <li class="nav-header m-v-sm hidden-folded" >
+      <div ng-if="section.type === 'heading'">
+      {{section.title}}
+      </div>
+     </li>
+      <menu-link section="section" ng-if="section.type === 'link'"></menu-link>
+      <menu-toggle section="section" ng-if="section.type === 'toggle'"></menu-toggle>
+
+      <div ng-if="section.children" ng-repeat="child in section.children">
+      
+      <menu-link section="child" ng-if="child.type === 'link'"></menu-link>
+
+      <menu-toggle section="child" ng-if="child.type === 'toggle'"></menu-toggle>
+
+      
+      </div>
+</div>
+-->

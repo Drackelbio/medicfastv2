@@ -1,0 +1,39 @@
+<md-dialog aria-label="Form" ng-cloak class="main" md-theme="{{ dynamicTheme }}">
+    <form name='myform'>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>
+                    <span ng-hide="menu.id == null">Editar </span>
+                    <span ng-hide="menu.id">Nueva </span>
+                    menu {{menu.id}} 
+                    
+                </h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="cancel()">
+                    <ng-md-icon icon="close" aria-label="Close dialog"></ng-md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+        <md-dialog-content>
+            <md-progress-circular layout-fill md-mode="indeterminate" ng-hide="true"></md-progress-circular>
+            <div class="md-dialog-content">
+                <div layout-gt-sm="row">
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>state</label>
+                        <input ng-model="menu.state" required>
+                    </md-input-container>
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>title</label>
+                        <input ng-model="menu.title">
+                    </md-input-container>
+                </div>
+        </md-dialog-content>
+        <md-dialog-actions layout="row">
+            <span flex></span>
+            <md-button type="reset" ng-click="cancel()" class="md-raised">Cancel</md-button>
+            <md-button type="submit" ng-click="save()" class="md-raised md-primary" ng-disabled="!myform.$valid">
+                guardar
+            </md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>

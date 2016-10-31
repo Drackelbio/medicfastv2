@@ -1,0 +1,105 @@
+<div ng-cloak>
+    <md-content class="md-padding" layout-xs="column">
+        <div flex-xs flex-gt-xs>
+            <md-card ng-controller="MenuCtrl">
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-headline">No use esta plantilla, use la de  <a ui-sref="auths.system.permission">permission</a></span>
+                        <span class="md-subhead"></span>
+                    </md-card-title-text>
+                </md-card-title>
+                <md-divider></md-divider>
+                <md-card-actions layout="row" layout-align="start center" layout-xs="column">
+                    <md-card-icon-actions>
+                        <!--
+                        <md-button class="md-fab md-mini md-primary" aria-label="Add" ng-click="new($event)">
+                            <ng-md-icon icon="add" aria-label="title"></ng-md-icon>
+                        </md-button>
+                    -->
+                        <md-button class="md-button" aria-label="Mostrar todo" ng-click="listAll()">
+                            Mostrar todo
+                        </md-button>
+                        <md-button class="md-icon-button" aria-label="Add" ng-click="new($event)">
+                            <md-tooltip md-autohide>Add</md-tooltip>
+                            <ng-md-icon icon="add" aria-label="Add"></ng-md-icon>
+                        </md-button>
+                    </md-card-icon-actions>
+                    <span flex></span>
+                    <md-card-icon-actions layout-align="end center">
+                        <input placeholder="buscar" ng-model="query" ng-keyup="buscar()">
+                        <md-button class="md-icon-button" aria-label="Share">
+                            <ng-md-icon icon="more_vert" aria-label="title"></ng-md-icon>
+                        </md-button>
+                    </md-card-icon-actions>
+                </md-card-actions>
+                <md-divider></md-divider>
+                <md-table-container>
+                    <table md-table data-md-row-select="" mi-table>
+                        <thead md-head>
+                            <tr md-row>
+                                <th md-column>#</th>
+                                <th md-column md:order:by="name">module</th>
+                                <th md-column md:order:by="name">pos</th>
+                                <th md-column md:order:by="name">parent</th>
+                                <th md-column>title</th>
+                                <th md-column>permission</th>
+                                <th md-column>state</th>
+                                <th md-column>icon</th>
+                                <th md-column>is_active</th>
+                                <th md-column colspan='2' align='center'>acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody md-body>
+                            <tr md-row ng-repeat="d in lista">
+                                <td md-cell>{{ (options.page - 1) * options.page_size +$index +1 }}</td>
+                                <td md-cell> {{ d.module }}</td>
+                                <td md-cell> {{ d.pos }}</td>
+                                <td md-cell> {{ d.parent.title }}</td>
+                                <td md-cell> {{ d.title }}</td>
+                                <td md-cell> {{ d.permission }}</td>
+                                <td md-cell> {{ d.state }}</td>
+                                <td md-cell> {{ d.icon }}</td>
+                                <td md-cell> {{ d.is_active }}</td>
+                                <td md-cell>
+                                    <md-button class="md-icon-button" aria-label="Edit" ng-click="sel(d)">
+                                        <md-tooltip md-autohide>Edit {{ d.nombre }}</md-tooltip>
+                                        <ng-md-icon icon="edit" aria-label="Edit"></ng-md-icon>
+                                    </md-button>
+                                </td>
+                                <td md-cell>
+                                    <md-button class="md-icon-button" aria-label="delete" ng-click="delete(d)">
+                                        <md-tooltip md-autohide>Delete {{ d.nombre }}</md-tooltip>
+                                        <ng-md-icon icon="delete" aria-label="delete"></ng-md-icon>
+                                    </md-button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </md-table-container>
+                <md-table-pagination>
+                    <table>
+                        <tfoot>
+                            <tr>
+                                <td>
+                                    <app-pagination ng-if="options.pages>0" per="options.page_size" page="options.page" format="{{'jumping'}}" display="4" rango="options.range" accion="list(params)" pages="options.pages" query="query" fields="{{fields}}"></app-pagination>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </md-table-pagination>
+                <md-table-pagination>
+                    <table>
+                        <tfoot>
+                            <tr>
+                                <td colspan="10">
+                                    <mi-pagination page="options.page" pages="options.pages" next="options.next" previous="options.previous" rango="options.range" activado="myactive" accion="list(params)" query="query">
+                                    </mi-pagination>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </md-table-pagination>
+            </md-card>
+        </div>
+    </md-content>
+</div>
