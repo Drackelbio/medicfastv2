@@ -60,5 +60,6 @@ app
         console.log("close aside");
         $timeout(function() { $document.find('#aside').length && $mdSidenav('aside').close(); });
     };
+    
 
 });

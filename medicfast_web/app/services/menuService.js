@@ -49,6 +49,10 @@ app
                 title: 'Test 5',
                 state: 'ui.test5',
                 type: 'link'
+            },{
+                title: 'Test 7',
+                state: 'ui.test7',
+                type: 'link'
             }, {
                 title: 'Test Directivas',
                 state: 'ui.dir',

@@ -84,6 +84,14 @@ app
         templateUrl: "medicfast_web_apps/ui/views/tests/test5pagination.html"
     })
     //==================================
+    // test7pagination
+    //==================================
+    .state("ui.test7", {
+        url: "/test7",
+        data: { section: 'UI', page: 'Test 7' },
+        templateUrl: "medicfast_web_apps/ui/views/tests/test7.html"
+    })
+    //==================================
     // test6directivas
     //==================================
     .state("ui.dir", {
