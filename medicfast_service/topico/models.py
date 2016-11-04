@@ -15,3 +15,17 @@ class Historialmedic(models.Model):
 
     def __str__(self):
         return self.numhistorial
+
+
+class Antecedente(models.Model):
+
+    estado = models.CharField(max_length=60, null=True, blank=True)
+    nombre = models.CharField(max_length=60, null=True, blank=True)
+    historialmedic = models.ForeignKey('Historialmedic')
+
+    class Meta:
+        verbose_name = "Antecedente"
+        verbose_name_plural = "Antecedentes"
+
+    def __str__(self):
+        return self.nombre
