@@ -29,3 +29,17 @@ class Antecedente(models.Model):
 
     def __str__(self):
         return self.nombre
+
+
+class Consulta(models.Model):
+
+    estadoact = models.TextField(null=True, blank=True)
+    examfis = models.TextField(null=True, blank=True)
+    historialmedic = models.ForeignKey('Historialmedic')
+
+    class Meta:
+        verbose_name = "Consulta"
+        verbose_name_plural = "Consultas"
+
+    def __str__(self):
+        return self.estadoact

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from topico.models import Historialmedic, Antecedente
+from topico.models import Historialmedic, Antecedente, Consulta
 # Register your models here.
 
 
@@ -18,3 +18,11 @@ class AntecedenteAdmin(admin.ModelAdmin):
     list_per_page = 2
 
 admin.site.register(Antecedente, AntecedenteAdmin)
+
+
+class ConsultaAdmin(admin.ModelAdmin):
+    list_display = ("estadoact", "examfis", "historialmedic")
+
+    list_per_page = 3
+
+admin.site.register(Consulta, ConsultaAdmin)
