@@ -1,5 +1,5 @@
 from django.contrib import admin
-from topico.models import Historialmedic, Antecedente, Consulta, Derivacion
+from topico.models import Historialmedic, Antecedente, Consulta, Derivacion, Tipestado
 # Register your models here.
 
 
@@ -35,3 +35,11 @@ class DerivacionAdmin(admin.ModelAdmin):
     list_per_page = 2
 
 admin.site.register(Derivacion, DerivacionAdmin)
+
+
+class TipestadoAdmin(admin.ModelAdmin):
+    list_display = ("estado", "derivacion")
+
+    list_per_page = 2
+
+admin.site.register(Tipestado, TipestadoAdmin)

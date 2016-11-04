@@ -56,3 +56,16 @@ class Derivacion(models.Model):
 
     def __str__(self):
         return self.destino
+
+
+class Tipestado(models.Model):
+
+    estado = models.CharField(max_length=60, null=True, blank=True)
+    derivacion = models.ForeignKey('Derivacion')
+
+    class Meta:
+        verbose_name = "Tipestado"
+        verbose_name_plural = "Tipestados"
+
+    def __str__(self):
+        return self.estado
