@@ -43,3 +43,16 @@ class Consulta(models.Model):
 
     def __str__(self):
         return self.estadoact
+
+
+class Derivacion(models.Model):
+
+    destino = models.CharField(max_length=60, null=True, blank=True)
+    consulta = models.ForeignKey('Consulta')
+
+    class Meta:
+        verbose_name = "Derivacion"
+        verbose_name_plural = "Derivacions"
+
+    def __str__(self):
+        return self.destino
