@@ -69,3 +69,20 @@ class Tipestado(models.Model):
 
     def __str__(self):
         return self.estado
+
+
+class Triaje(models.Model):
+
+    descripcion = models.TextField(null=True, blank=True)
+    peso = models.CharField(max_length=60, null=True, blank=True)
+    presion = models.CharField(max_length=60, null=True, blank=True)
+    talla = models.CharField(max_length=60, null=True, blank=True)
+    temperatura = models.CharField(max_length=60, null=True, blank=True)
+    consulta = models.ForeignKey('Consulta')
+
+    class Meta:
+        verbose_name = "Triaje"
+        verbose_name_plural = "Triajes"
+
+    def __str__(self):
+        return self.descripcion
