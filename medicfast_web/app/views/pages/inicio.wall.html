@@ -1,0 +1,142 @@
+<div ng-cloak>
+    <md-content class="md-padding" layout-xs="column" layout="row">
+        <div flex-xs flex-gt-xs="100" layout="column">
+            <md-card ng-controllerx="CategoriaCtrl">
+                <md-card-header>
+                    <md-card-avatar>
+                        <img class="md-user-avatar" src="media/img/list/60.jpeg" />
+                    </md-card-avatar>
+                    <md-card-header-text>
+                        <span class="md-headline este">BUSCAR PACIENTES</span>
+                        <span class="md-subhead">subhead</span>
+                    </md-card-header-text>
+
+                </md-card-header>
+                <md-divider></md-divider>
+                
+     <!-- esto son los buscadoress -->
+                <md-card-actions layout="row" layout-align="start center" >
+                            
+                           
+                            <md-card-icon-actions>
+                                
+                                <md-input-container class="md-block md-search">
+                                    <input placeholder="Buscar" ng-model="query" ng-keyup="buscar()">
+                                </md-input-container>
+                                
+                                
+      
+
+
+                            </md-card-icon-actions>
+
+                            <md-card-icon-actions>
+                                
+                                <md-input-container class="md-block md-search">
+                                    <input placeholder="Buscar por codigo" ng-model="query" ng-keyup="buscar()">
+                                </md-input-container>
+                                 
+                               
+      
+
+
+                            </md-card-icon-actions>
+
+                        </md-card-actions>
+                
+       <!-- esto son los buscadoress -->     
+                         <md-card-actions layout="row" layout-align="start center" >
+                            
+                           
+                            <md-card-icon-actions>
+                                
+                                <md-input-container class="md-block md-search">
+                                    <input placeholder="Buscar por DNI" ng-model="query" ng-keyup="buscar()">
+                                </md-input-container>
+                                 
+                                
+      
+
+
+                            </md-card-icon-actions>
+                            <md-card-icon-actions>
+                                
+                                <md-input-container class="md-block md-search">
+                                    <input placeholder="Buscar po apellidos" ng-model="query" ng-keyup="buscar()">
+                                </md-input-container>
+                                
+                               
+      
+
+
+                            </md-card-icon-actions>
+
+                        </md-card-actions>
+ <section layout="row" layout-sm="column" layout-align="center center" layout-wrap class="e">
+                        <md-button class="md-raised md-primary ericaa" ng-click="save()">Buscar</md-button> </left>
+                          <md-button class="md-raised md-primary " ng-click="save()">nuevo paciente</md-button>
+                           </section>
+                         <table table-responsive>
+                        
+                        <md-progress-linear layout-fill md-mode="indeterminate" ng-hide="!isLoading"></md-progress-linear>
+                        <thead md-on-reorder="onReorder">
+                            <tr>
+                                <th>#</th>
+                                 <th class="col-hidden" data-order="codigo">codigo</th>
+                                 <th class="col-hidden" data-order="nombre">nombre</th>
+                                 <th class="col-hidden" data-order="nombre">apellidos</th>
+                                 <th class="col-hidden" data-order="nombre">categoria</th>
+                                 <th class="col-hidden" data-order="nombre">Direcion</th>
+                                 <th class="col-hidden" data-order="nombre">telefono</th>
+
+
+                                
+                                <th colspan="2" class="align-options">acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="d in lista">
+                                <td> {{ $index + 1 }} </td>
+                                <td> {{ d.nombre }} </td>
+                                <td> {{ d.codigo }} </td>
+                                <td> {{ d.estado }} </td>
+                                <td>
+                                    <md-button class="md-icon-button md-td" aria-label="Edit" ui-sref="catalogo.catalogo.categoriasEdit({id:d.id})">
+                                        <md-tooltip md-autohide>Edit {{ d.codename }}</md-tooltip>
+                                        <ng-md-icon  size="24" icon="edit" aria-label="Edit"></ng-md-icon>
+                                    </md-button>
+                                </td>
+                                <td>
+                                    <md-button class="md-icon-button md-td" aria-label="delete" ng-click="delete(d)">
+                                        <md-tooltip md-autohide>Delete {{ d.codename }}</md-tooltip>
+                                        <ng-md-icon  size="24" icon="delete" aria-label="delete"></ng-md-icon>
+                                    </md-button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+                        <!-- ffff -->
+                        
+               
+            </md-card>
+        </div>
+    </md-content>
+</div>
+<style>
+.este {
+    text-align: center;
+
+}
+.erica {
+    width: 10px;
+    height: 10px;
+    
+}
+
+
+
+
+
+</style>
