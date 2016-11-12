@@ -22,6 +22,45 @@ app
         type: 'link'
     });
 
+     sections.push({
+        //title: 'Sección ui',
+        //type: 'heading',
+        menu: [{
+            title: 'Historial Medico',
+            type: 'toggle',
+            state: 'ui',
+            menu_items: [{
+                title: 'Funciones vitales',
+                state: 'ui.test1',
+                type: 'link'
+            }, {
+                title: 'registro paciente',
+                state: 'ui.test2',
+                type: 'link'
+            }, {
+                title: 'Diagnostico',
+                state: 'ui.test3',
+                type: 'link'
+            }, {
+                title: 'tratamiento',
+                state: 'ui.test4',
+                type: 'link'
+            }, {
+                title: 'suministracion de medicamento',
+                state: 'ui.test5',
+                type: 'link'
+            },{
+                title: 'derivacion',
+                state: 'ui.test7',
+                type: 'link'
+            }, {
+                title: 'descanso medico',
+                state: 'ui.dir',
+                type: 'link'
+            }, ]
+        }]
+    });
+
     sections.push({
         //title: 'Sección ui',
         //type: 'heading',
@@ -30,34 +69,18 @@ app
             type: 'toggle',
             state: 'ui',
             menu_items: [{
-                title: 'Test 1 uno más',
+                title: 'Trabajador',
                 state: 'ui.test1',
                 type: 'link'
             }, {
-                title: '2Test 2',
+                title: 'Medicamentos',
                 state: 'ui.test2',
                 type: 'link'
             }, {
-                title: 'Test 3',
+                title: 'CIE 10',
                 state: 'ui.test3',
                 type: 'link'
-            }, {
-                title: 'Test 4',
-                state: 'ui.test4',
-                type: 'link'
-            }, {
-                title: 'Test 5',
-                state: 'ui.test5',
-                type: 'link'
-            },{
-                title: 'Test 7',
-                state: 'ui.test7',
-                type: 'link'
-            }, {
-                title: 'Test Directivas',
-                state: 'ui.dir',
-                type: 'link'
-            }, ]
+            } ]
         }]
     });
 
@@ -67,20 +90,16 @@ app
             title: 'REPORTES',
             type: 'toggle',
             state: 'auths.system',
-            menu_items: [{
-                title: 'xx',
-                state: 'auths.system.xx',
-                type: 'link'
-            }, {
-                title: 'Grupos',
+            menu_items: [ {
+                title: 'Estadistico',
                 state: 'auths.system.ct',
                 type: 'link'
             }, {
-                title: 'Permission',
+                title: 'Institucional',
                 state: 'auths.system.permission',
                 type: 'link'
             }, {
-                title: 'Menu',
+                title: 'Visitas y misiones',
                 state: 'auths.system.menu',
                 type: 'link'
             }, ]

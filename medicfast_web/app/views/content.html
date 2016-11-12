@@ -44,7 +44,7 @@
                                     <md-button ng-click="logOut()">
                                         <div layout="row">
                                             <p flex>Salir</p>
-                                            <md-icon md-menu-align-target style="margin: auto 3px auto 0;"></md-icon>
+                                           
                                         </div>
                                     </md-button>
                                 </md-menu-item>
@@ -58,49 +58,7 @@
             </div>
         </div>
     </md-toolbar>
-    <!-- 
-  <md-content>
-    <md-toolbar md-theme="{{ dynamicTheme }}" class=" md-hue-2">
-      <div class="md-toolbar-tools">
-        <md-button class="md-icon-button" hide-gt-sm aria-label="Toggle Menu" ng-click="openAside()">
-          <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
-        </md-button>
-        <h2>
-          <span ng-if="$state.current.data.section">
-              <span hide-xs hide-sm hide-md ng-bind="$state.current.data.section">{{menu.currentSection.title}}</span>
-              <span  ng-if="$state.current.data.section" class="docs-menu-separator-icon" hide-xs hide-sm hide-md style="transform: translate3d(0, 1px, 0)">
-                <span class="md-visually-hidden">-</span>
-                <md-icon
-                    aria-hidden="true"
-                    md-svg-src="img/icons/ic_chevron_right_24px.svg"
-                    style="transform:translateY(-2px)"></md-icon>
-              </span>
-            </span>
-            <span class="md-breadcrumb-page" ng-bind="$state.current.data.page">{{menu.currentPage }}</span>
-        </h2>
-        <span flex></span>
-        <md-button class="md-icon-button"
-                       aria-label="View Source on Github"
-                       ng-if="!currentComponent.docs.length"
-                       target="_blank"
-                       ng-href="{{BUILDCONFIG.repository}}/{{menu.version.current.github}}">
-              <md-tooltip md-autohide>View Source on Github</md-tooltip>
-              <md-icon md-svg-src="img/icons/github.svg" style="color: rgba(255,255,255,0.97);"></md-icon>
-            </md-button>
 
-        <md-button class="md-icon-button" aria-label="Favorite">
-          <md-icon md-svg-icon="img/icons/favorite.svg" style="color: greenyellow;"></md-icon>
-        </md-button>
-        <md-button class="md-icon-button" aria-label="More">
-          <md-icon md-svg-icon="img/icons/more_vert.svg"></md-icon>
-        </md-button>
-      </div>
-    </md-toolbar>
-    
-  </md-content>
--->
-    <!-- / Content Navbar -->
-    <!-- Content -->
     <div class="box-row">
         <div class="box-cell">
             <div class="box-inner md-scroll-y flex" ui-view>
