@@ -1,98 +1,35 @@
 app
 
     .controller("NomCtrl", function($scope) {
-    //$scope.nombre = "Juan Perez";
+    
     $scope.save = function() {
         console.log("Hola " + $scope.nombre);
     };
     $scope.lista = [
 
         {
-            "id": 5,
-            "nombre": " 5",
-            "codigo": "05",
+            "id": 1,
+            "nombre": "Yuri Mamani Ramos",
+            "codigo": "201322760",
+            "triaje": "talla: 1.58, peso: 60, P.A: 32, temperatura: 12°",
+            "UlDiagnostico": "gripe/tos seca",
             "estado": true
         }, {
-            "id": 7,
-            "nombre": "s",
-            "codigo": "s",
+            "id": 2,
+            "nombre": "Eleuterio quispe poma",
+            "codigo": "201322745",
+            "triaje": "talla:1.60, peso: 65, P.A: 32, temperatura: 12°",
+            "UlDiagnostico": "fiebre",
             "estado": false
+        }, {
+            "id": 3,
+            "nombre": "Elbio labra chino",
+            "codigo": "201322749",
+            "triaje": "talla:1.80, peso: 65, P.A: 32, temperatura: 12°",
+            "UlDiagnostico": "apertura",
+            "estado": true
         }
     ];
 });
 
 
-
-
-app
-
-    .controller('SubheaderAppCtrl', function($scope) {
-    var imagePath = 'media/img/list/60.jpeg';
-    $scope.messages = [{
-        face: imagePath,
-        what: 'Brunch this weekend?',
-        who: 'Min Li Chan',
-        when: '3:08PM',
-        notes: " I'll be in your neighborhood doing errands"
-    }, {
-        face: imagePath,
-        what: 'Brunch this weekend?',
-        who: 'Min Li Chan',
-        when: '3:08PM',
-        notes: " I'll be in your neighborhood doing errands"
-    }, {
-        face: imagePath,
-        what: 'Brunch this weekend?',
-        who: 'Min Li Chan',
-        when: '3:08PM',
-        notes: " I'll be in your neighborhood doing errands"
-    }, {
-        face: imagePath,
-        what: 'Brunch this weekend?',
-        who: 'Min Li Chan',
-        when: '3:08PM',
-        notes: " I'll be in your neighborhood doing errands"
-    }, {
-        face: imagePath,
-        what: 'Brunch this weekend?',
-        who: 'Min Li Chan',
-        when: '3:08PM',
-        notes: " I'll be in your neighborhood doing errands"
-    }, {
-        face: imagePath,
-        what: 'Brunch this weekend?',
-        who: 'Min Li Chan',
-        when: '3:08PM',
-        notes: " I'll be in your neighborhood doing errands"
-    }, {
-        face: imagePath,
-        what: 'Brunch this weekend?',
-        who: 'Min Li Chan',
-        when: '3:08PM',
-        notes: " I'll be in your neighborhood doing errands"
-    }, {
-        face: imagePath,
-        what: 'Brunch this weekend?',
-        who: 'Min Li Chan',
-        when: '3:08PM',
-        notes: " I'll be in your neighborhood doing errands"
-    }, {
-        face: imagePath,
-        what: 'Brunch this weekend?',
-        who: 'Min Li Chan',
-        when: '3:08PM',
-        notes: " I'll be in your neighborhood doing errands"
-    }, {
-        face: imagePath,
-        what: 'Brunch this weekend?',
-        who: 'Min Li Chan',
-        when: '3:08PM',
-        notes: " I'll be in your neighborhood doing errands"
-    }, {
-        face: imagePath,
-        what: 'Brunch this weekend?',
-        who: 'Min Li Chan',
-        when: '3:08PM',
-        notes: " I'll be in your neighborhood doing errands fin"
-    }, ];
-});

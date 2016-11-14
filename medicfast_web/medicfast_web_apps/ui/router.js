@@ -28,14 +28,14 @@ app
     //==================================
     // test1
     //==================================
-    .state("ui.test1", {
-        url: "/test1",
-        data: { section: 'UI', page: 'Test 1 uno más' },
+    .state("ui.Diagnostico", {
+        url: "/Diagnostico",
+        data: { section: 'UI', page: 'Diagnostico ' },
         settings: {
             //loginRequired: true,
             //roles: ['User'],
         },
-        templateUrl: "medicfast_web_apps/ui/views/tests/test1.html",
+        templateUrl: "medicfast_web_apps/ui/views/tests/Diagnostico.html",
         resolve: {
             //checkSecurity: checkSecurity,
         },

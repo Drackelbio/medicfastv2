@@ -1,0 +1,60 @@
+<div ng-cloak>
+    <md-content class="md-padding" layout-xs="column">
+        <div flex-xs flex-gt-xs>
+            <md-card ng-controller="NomCtrl">
+                <md-card-title>
+                    <md-card-title-text layout-align="end center" layout-wrap>
+                    
+                        <span class="md-headline">Diagnosticar Paciente</span>                       
+                    </md-card-title-text>
+                </md-card-title>
+                <md-card-content layout="row">
+                    <div>
+                        <form name="userForm">
+                            <div layout-gt-sm="row">
+                                <md-input-container class="md-block" flex-gt-sm>
+                                    <label>Nombre o codigo</label>
+                                    <input ng-model="nombre">
+                                </md-input-container>
+                            </div>
+                        </form>
+                    </div>
+                </md-card-content>
+                <md-card-actions layout="row" layout-align="end center" layout-wrap>         
+                                                    
+                    <md-button class="md-raised md-primary" ng-click="save()">Buscar</md-button>
+                    <md-button ng-disabled="true" class="md-raised md-primary">Registrar</md-button>                   
+                </md-card-actions>
+                <md-divider></md-divider>
+               
+                <md-divider></md-divider>
+                <table md-table data-md-row-select="">
+                    <thead md-head>
+                        <tr md-row>
+                            <th md-column>#</th>
+                            <th md-column md:order:by="name">Nombre</th>
+                            <th md-column>Codigo</th>
+                            <th md-column>Funciones Vitales</th>
+                            <th md-column>Ultimo Diagnostico</th>
+                            <th md-column>Opciones</th>
+                        </tr>
+                    </thead>
+                    <tbody md-body>
+                        <tr md-row ng-repeat="d in lista | filter: nombre | filter: codigo">
+                            <td md-cell> {{ d.num }}</td>
+                            <td md-cell> {{ d.nombre }}</td>
+                            <td md-cell> {{ d.codigo }}</td>
+                             <td md-cell> {{ d.triaje}}</td>
+                             <td md-cell> {{ d.UlDiagnostico}}</td>
+                            <td md-cell> <a href="" ng-click="sel(d)">Diagnosticar</a> </td>
+                            <td md-cell> <a href="" ng-click="delete(d)">Historial medico</a> </td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </md-card>
+        </div>
+       
+    </md-content>
+</div>
+

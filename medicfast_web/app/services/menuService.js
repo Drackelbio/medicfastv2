@@ -31,7 +31,7 @@ app
             state: 'ui',
             menu_items: [{
                 title: 'Funciones vitales',
-                state: 'ui.test1',
+                state: 'ui.test3',
                 type: 'link'
             }, {
                 title: 'registro paciente',
@@ -39,7 +39,7 @@ app
                 type: 'link'
             }, {
                 title: 'Diagnostico',
-                state: 'ui.test3',
+                state: 'ui.Diagnostico',
                 type: 'link'
             }, {
                 title: 'tratamiento',
