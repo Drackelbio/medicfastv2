@@ -1,0 +1,9 @@
+Django==1.10.3
+django-braces==1.10.0
+django-cors-headers==1.2.2
+django-oauth-toolkit==0.10.0
+djangorestframework==3.5.2
+docutils==0.12
+oauthlib==1.0.3
+Pillow==3.4.2
+six==1.10.0
