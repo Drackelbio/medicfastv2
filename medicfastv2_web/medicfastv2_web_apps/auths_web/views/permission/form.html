@@ -1,0 +1,60 @@
+<md-dialog aria-label="Form" ng-cloak class="main" md-theme="{{ dynamicTheme }}">
+    <form name='myform'>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>
+                    <span ng-hide="permission.id == null">Editar </span>
+                    <span ng-hide="permission.id">Nuevo </span>
+                     Permission {{menu.id}} 
+                </h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="cancel()">
+                    <ng-md-icon icon="close" aria-label="Close dialog"></ng-md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+        <md-dialog-content>
+            
+            <div class="md-dialog-content">
+                <div layout-gt-sm="row">
+                    <md-input-container class="md-block" flex-gt-sm>
+                                    <label>Contenttype</label>
+                                    <md-autocomplete
+                                        md-search-text="content_type"
+                                        md-search-text-change="cleanId(content_type,1)"
+                                        md-selected-item-change="selId(item.id)"
+                                        md-items="item in searchContentType(content_type)" 
+                                        md-item-text="item.app_label+' ['+item.model+']'"
+                                        md-input-name="content_type"
+                                        md-autoselect="true"
+                                        md-min-length="0"
+                                        >
+                                        <md-item-template>
+                                            <span md-highlight-text="item.content_type_id" md-highlight-flags="^i">
+                                                {{item.app_label}}   [{{item.model}}]  </span>
+
+                                        </md-item-template>
+                                        <md-not-found>
+                                            <a href="#">Registrar nuevo</a>
+                                        </md-not-found>
+                                    </md-autocomplete>
+                    </md-input-container> 
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Nombre</label>
+                        <input ng-model="permission.name" required>
+                    </md-input-container>
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Accion</label>
+                        <input ng-model="permission.codename">
+                    </md-input-container>
+                </div>
+        </md-dialog-content>
+        <md-dialog-actions layout="row">
+            <span flex></span>
+            <md-button type="reset" ng-click="cancel()" class="md-raised">Cancel</md-button>
+            <md-button type="submit" ng-click="save()" class="md-raised md-primary" ng-disabled="!myform.$valid">
+                guardar
+            </md-button>
+        </md-dialog-actions>
+    </form>
+</md-dialog>

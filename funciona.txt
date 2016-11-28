@@ -1,0 +1,24 @@
+medicfastv2> virtualenv ve_mecidfast
+
+----  activar e entorno virtual --- 
+medicfastv2>ve_mecidfast\Scripts\activate
+(ve_mecidfast)medicfast_service>cd medicfast__service
+(ve_mecidfast)medicfast_service>medicfast__service> pip install -r requermets.txt
+
+y luego solo manage.py runserver 9000
+
+:) 
+
+para el cliente:
+medicfastv2> npm install 
+medicfastv2> npm install -g gulp
+medicfastv2>medicfast_web> bower install 
+medicfastv2>auth_web> bower install 
+medicfastv2>medicfast_web> npm install angular 
+medicfastv2>medicfast_web> npm install angular-ui-router
+medicfastv2>medicfast_web> npm install angular-resource
+
+medicfastv2>gulp serve
+
+
+:)

@@ -1,0 +1,33 @@
+{
+  "name": "web",
+  "homepage": "index.html",
+  "authors": [
+    "asullom"
+  ],
+  "description": "web app",
+  "main": "index.html",
+  "keywords": [
+    "angular",
+    "material"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-ui-router": "^0.3.1",
+    "angular-material": "^1.1.1",
+    "angular-local-storage": "^0.5.2",
+    "angular-material-icons": "^0.7.1",
+    "angular-sanitize": "^1.5.8",
+    "angular-resource": "^1.5.8",
+    "angular-toastr": "^2.1.1",
+    "moment": "^2.15.2"
+  }
+}

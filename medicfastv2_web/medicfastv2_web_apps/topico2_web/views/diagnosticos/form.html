@@ -1,0 +1,63 @@
+<div ng-cloak>
+    <md-content class="md-padding" layout-xs="column" layout="row">
+        <div flex-xs flex-gt-xs="100" layout="column">
+            <form name="dForm" role="form" ng-controller="DiagnosticoSaveCtrl"> 
+                <md-card>
+                    <md-card-header>
+                        <md-card-avatar>
+                            <img class="md-user-avatar" src="media/img/his.jpg" />
+                        </md-card-avatar>
+                        <md-card-header-text>
+                           
+                            <span class="md-headline">Diagnosticos</span>
+                            <span class="md-subhead">Registrar Diagnostico</span>
+                        </md-card-header-text>
+                    </md-card-header>
+
+                    <md-divider></md-divider>
+                    <md-card-content>
+                        <div layout-gt-sm="row">
+                            
+
+                            <md-input-container class="md-block"  flex-gt-sm>
+                              
+                                <input placeholder="codico del CIE" name="codigo" ng-model="diagnostico.codigo" required>
+                                <div ng-messages="dForm.codigo.$error">
+                                    <div ng-message="required">This is required.</div>
+                                </div>
+                            </md-input-container>
+
+                           
+                             <md-divider></md-divider>
+
+                             <md-input-container class="md-block"  flex-gt-sm>
+                              
+                                <input placeholder="Nombre del CIE10" name="nombre" ng-model="diagnostico.nombre" required>
+                                <div ng-messages="dForm.nombre.$error">
+                                    <div ng-message="required">This is required.</div>
+                                </div>
+                            </md-input-container>
+
+                        </div>                       
+
+
+
+                    </md-card-content>
+                    <md-divider></md-divider>
+                    <md-card-actions layout="row" layout-xs="column" layout-align="start center">
+                        <md-card-icon-actions>
+                            <md-button class="md-icon-button" aria-label="toggle">
+                                <md-icon md-svg-icon="md-toggle-arrow"></md-icon>
+                            </md-button>
+                        </md-card-icon-actions>
+                        <md-button type="reset" ng-click="cancel()" class="md-raised">Cancelar</md-button>
+                        <md-button type="submit" ng-click="save()" class="md-raised md-primary">
+                            <span ng-show="diagnostico.id == null">Crear</span>
+                            <span ng-show="diagnostico.id">Actualizar</span>
+                        </md-button>
+                    </md-card-actions>
+                </md-card>
+            </form>
+        </div>
+    </md-content>
+</div>

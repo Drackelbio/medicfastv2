@@ -1,0 +1,45 @@
+[2016-11-12 15:20:28] [INFO] [medicfastv2_service_apps.auths_api.user_view:78] [/api/auths/localuserinfo/] [127.0.0.1] [admin] [GET] User is authenticated
+[2016-11-12 16:56:02] [INFO] [medicfastv2_service_apps.auths_api.user_view:78] [/api/auths/localuserinfo/] [127.0.0.1] [admin] [GET] User is authenticated
+[2016-11-12 17:01:48] [INFO] [medicfastv2_service_apps.auths_api.user_view:78] [/api/auths/localuserinfo/] [127.0.0.1] [admin] [GET] User is authenticated
+[2016-11-12 17:01:51] [INFO] [medicfastv2_service_apps.auths_api.user_view:78] [/api/auths/localuserinfo/] [127.0.0.1] [admin] [GET] User is authenticated
+[2016-11-12 17:09:10] [INFO] [medicfastv2_service_apps.auths_api.user_view:78] [/api/auths/localuserinfo/] [127.0.0.1] [admin] [GET] User is authenticated
+[2016-11-12 17:10:04] [INFO] [medicfastv2_service_apps.auths_api.user_view:78] [/api/auths/localuserinfo/] [127.0.0.1] [admin] [GET] User is authenticated
+[2016-11-12 17:13:23] [INFO] [medicfastv2_service_apps.auths_api.user_view:78] [/api/auths/localuserinfo/] [127.0.0.1] [admin] [GET] User is authenticated
+[2016-11-12 17:20:07] [INFO] [medicfastv2_service_apps.auths_api.user_view:78] [/api/auths/localuserinfo/] [127.0.0.1] [admin] [GET] User is authenticated
+[2016-11-12 17:22:00] [INFO] [medicfastv2_service_apps.auths_api.user_view:78] [/api/auths/localuserinfo/] [127.0.0.1] [admin] [GET] User is authenticated
+[2016-11-12 17:28:13] [INFO] [medicfastv2_service_apps.auths_api.user_view:78] [/api/auths/localuserinfo/] [127.0.0.1] [admin] [GET] User is authenticated
+[2016-11-12 17:31:40] [INFO] [medicfastv2_service_apps.auths_api.user_view:78] [/api/auths/localuserinfo/] [127.0.0.1] [admin] [GET] User is authenticated
+[2016-11-12 17:34:10] [INFO] [medicfastv2_service_apps.auths_api.user_view:78] [/api/auths/localuserinfo/] [127.0.0.1] [admin] [GET] User is authenticated
+[2016-11-12 17:35:10] [INFO] [medicfastv2_service_apps.auths_api.user_view:78] [/api/auths/localuserinfo/] [127.0.0.1] [admin] [GET] User is authenticated
+[2016-11-12 18:04:16] [INFO] [medicfastv2_service_apps.auths_api.user_view:78] [/api/auths/localuserinfo/] [127.0.0.1] [admin] [GET] User is authenticated
+[2016-11-12 18:29:59] [INFO] [medicfastv2_service_apps.auths_api.user_view:78] [/api/auths/localuserinfo/] [127.0.0.1] [admin] [GET] User is authenticated
+[2016-11-12 19:23:27] [INFO] [medicfastv2_service_apps.auths_api.user_view:78] [/api/auths/localuserinfo/] [127.0.0.1] [admin] [GET] User is authenticated
+[2016-11-12 19:33:01] [INFO] [medicfastv2_service_apps.auths_api.menu_view:55] [/api/auths/menus/?page=1&page_size=5] [127.0.0.1] [admin] [GET] !!Writing in log file!!
+[2016-11-12 19:33:01] [INFO] [medicfastv2_service_apps.auths_api.menu_view:55] [/api/auths/menus/?page=1&page_size=5] [127.0.0.1] [admin] [GET] !!Writing in log file!!
+<<<<<<< HEAD
+[2016-11-12 23:07:20] [INFO] [medicfastv2_service_apps.auths_api.user_view:78] [/api/auths/localuserinfo/] [127.0.0.1] [admin] [GET] User is authenticated
+[2016-11-12 23:07:53] [INFO] [medicfastv2_service_apps.auths_api.menu_view:55] [/api/auths/menus/?page=1&page_size=5] [127.0.0.1] [admin] [GET] !!Writing in log file!!
+[2016-11-12 23:07:53] [INFO] [medicfastv2_service_apps.auths_api.menu_view:55] [/api/auths/menus/?page=1&page_size=5] [127.0.0.1] [admin] [GET] !!Writing in log file!!
+[2016-11-12 23:12:00] [INFO] [medicfastv2_service_apps.auths_api.user_view:78] [/api/auths/localuserinfo/] [127.0.0.1] [admin] [GET] User is authenticated
+[2016-11-12 23:12:24] [INFO] [medicfastv2_service_apps.auths_api.user_view:78] [/api/auths/localuserinfo/] [127.0.0.1] [admin] [GET] User is authenticated
+[2016-11-12 23:14:20] [INFO] [medicfastv2_service_apps.auths_api.user_view:78] [/api/auths/localuserinfo/] [127.0.0.1] [admin] [GET] User is authenticated
+[2016-11-12 23:17:10] [INFO] [medicfastv2_service_apps.auths_api.user_view:78] [/api/auths/localuserinfo/] [127.0.0.1] [admin] [GET] User is authenticated
+[2016-11-12 23:19:32] [INFO] [medicfastv2_service_apps.auths_api.user_view:78] [/api/auths/localuserinfo/] [127.0.0.1] [admin] [GET] User is authenticated
+[2016-11-12 23:20:37] [INFO] [medicfastv2_service_apps.auths_api.user_view:78] [/api/auths/localuserinfo/] [127.0.0.1] [admin] [GET] User is authenticated
+[2016-11-12 23:20:57] [INFO] [medicfastv2_service_apps.auths_api.user_view:78] [/api/auths/localuserinfo/] [127.0.0.1] [admin] [GET] User is authenticated
+[2016-11-12 23:21:18] [INFO] [medicfastv2_service_apps.auths_api.user_view:78] [/api/auths/localuserinfo/] [127.0.0.1] [admin] [GET] User is authenticated
+[2016-11-12 23:22:03] [INFO] [medicfastv2_service_apps.auths_api.user_view:78] [/api/auths/localuserinfo/] [127.0.0.1] [admin] [GET] User is authenticated
+[2016-11-12 23:22:51] [INFO] [medicfastv2_service_apps.auths_api.user_view:78] [/api/auths/localuserinfo/] [127.0.0.1] [admin] [GET] User is authenticated
+[2016-11-12 23:24:01] [INFO] [medicfastv2_service_apps.auths_api.user_view:78] [/api/auths/localuserinfo/] [127.0.0.1] [admin] [GET] User is authenticated
+[2016-11-12 23:24:20] [INFO] [medicfastv2_service_apps.auths_api.user_view:78] [/api/auths/localuserinfo/] [127.0.0.1] [admin] [GET] User is authenticated
+[2016-11-12 23:25:25] [INFO] [medicfastv2_service_apps.auths_api.user_view:78] [/api/auths/localuserinfo/] [127.0.0.1] [admin] [GET] User is authenticated
+[2016-11-12 23:26:10] [INFO] [medicfastv2_service_apps.auths_api.user_view:78] [/api/auths/localuserinfo/] [127.0.0.1] [admin] [GET] User is authenticated
+[2016-11-12 23:26:28] [INFO] [medicfastv2_service_apps.auths_api.user_view:78] [/api/auths/localuserinfo/] [127.0.0.1] [admin] [GET] User is authenticated
+[2016-11-12 23:26:55] [INFO] [medicfastv2_service_apps.auths_api.user_view:78] [/api/auths/localuserinfo/] [127.0.0.1] [admin] [GET] User is authenticated
+[2016-11-12 23:27:17] [INFO] [medicfastv2_service_apps.auths_api.user_view:78] [/api/auths/localuserinfo/] [127.0.0.1] [admin] [GET] User is authenticated
+[2016-11-12 23:28:13] [INFO] [medicfastv2_service_apps.auths_api.user_view:78] [/api/auths/localuserinfo/] [127.0.0.1] [admin] [GET] User is authenticated
+[2016-11-12 23:28:42] [INFO] [medicfastv2_service_apps.auths_api.user_view:78] [/api/auths/localuserinfo/] [127.0.0.1] [admin] [GET] User is authenticated
+[2016-11-12 23:29:22] [INFO] [medicfastv2_service_apps.auths_api.user_view:78] [/api/auths/localuserinfo/] [127.0.0.1] [admin] [GET] User is authenticated
+[2016-11-12 23:29:38] [INFO] [medicfastv2_service_apps.auths_api.user_view:78] [/api/auths/localuserinfo/] [127.0.0.1] [admin] [GET] User is authenticated
+=======
+>>>>>>> b7d34f76970a357c3b5ebbdd14aeb54acac9c10b

@@ -1,0 +1,81 @@
+<div ng-cloak>
+    <md-content class="md-padding" layout-xs="column" layout="row">
+        <div flex-xs flex-gt-xs="100" layout="column">
+            <md-card ng-controller="EspecificacionrecetaCtrl">
+                <md-card-header>
+                    <md-card-avatar>
+                        <img class="md-user-avatar" src="media/img/his.jpg" />
+                    </md-card-avatar>
+                    <md-card-header-text>
+                        <span class="md-headline">Recetas Suministradas</span>
+                        <span class="md-subhead">recetas de acuerdo a las consultas </span>
+                    </md-card-header-text>
+                </md-card-header>
+                <md-divider></md-divider>        
+                        
+                <md-card-content>
+                    
+                    <table table-responsive>
+                        
+                        <md-progress-linear layout-fill md-mode="indeterminate" ng-hide="!isLoading"></md-progress-linear>
+                        <thead md-on-reorder="onReorder">
+                            <tr>
+                                <th>N°</th>
+                                <th class="col-hidden" data-order="cantidad">cantidad</th>
+                                <th>Dosis</th>
+                                <th>Periodo</th>
+                                
+                                <th>Importe</th>
+                                <th>Precio</th>
+                                <th>Fecha creada</th>
+                                <th>Recomendacion</th>                                
+                                <th colspan="2"  class="align-options">acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="d in lista | filter: cantidad">
+                                <td> {{ $index + 1 }} </td>
+                                <td> {{ d.cantidad }} </td>
+                                <td> {{ d.dosis }} </td>
+                                <td> {{ d.periodo }} </td>
+                                
+                                <td> {{ d.importe }} </td>
+                                <td> {{ d.precio_venta }} </td>
+                                <td> {{ d.created_at }} </td>
+                                <td> {{ d.recomendacion }} </td>
+                                <td>
+                                    <md-button class="md-icon-button md-td" aria-label="Edit" ui-sref="topico2.topico2.especificacionrecetasEdit({id:d.id})">
+                                        <md-tooltip md-autohide>ver {{ d.codename }}</md-tooltip>
+                                        <ng-md-icon  size="24" icon="look" aria-label="Look"></ng-md-icon>
+                                    </md-button>
+                                </td>
+                                <td>
+                                    <md-button class="md-icon-button md-td" aria-label="delete" ng-click="delete(d)">
+                                        <md-tooltip md-autohide>Delete {{ d.codename }}</md-tooltip>
+                                        <ng-md-icon  size="24" icon="delete" aria-label="delete"></ng-md-icon>
+                                    </md-button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+               
+
+                    </md-table-container>
+                    <md-table-pagination>
+                        <table>
+                            <tfoot>
+                                <tr>
+                                    <td>
+                                        <app-pagination ng-if="options.pages>0" per="options.page_size" page="options.page" format="{{'jumping'}}" display="4" rango="options.range" accion="list(params)" pages="options.pages" query="query" fields="{{fields}}"></app-pagination>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </md-table-pagination>
+                </md-card-content>
+            </md-card>
+        </div>
+    </md-content>
+</div>

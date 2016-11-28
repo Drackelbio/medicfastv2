@@ -1,0 +1,88 @@
+<div ng-cloak>
+    <md-content class="md-padding" layout-xs="column" layout="row">
+        <div flex-xs flex-gt-xs="100" layout="column">
+            <form name="dForm" role="form" ng-controller="MedicamentoSaveCtrl"> 
+                <md-card>
+                    <md-card-header>
+                        <md-card-avatar>
+                            <img class="md-user-avatar" src="media/img/mede.jpg" />
+                        </md-card-avatar>
+                        <md-card-header-text>
+                           
+                            <span class="md-headline">Medicamentos </span>
+                            <span class="md-subhead">productos de tratamiento</span>
+                        </md-card-header-text>
+                    </md-card-header>
+                    <md-card-content>
+                        <div layout-gt-sm="row">
+                            
+                            <md-input-container class="md-block" flex-gt-sm>
+                                <label>nombre del medicamento</label>
+                                <input name="nombre" ng-model="medicamento.nombre" required>
+                                <div ng-messages="dForm.nombre.$error">
+                                    <div ng-message="required">This is required.</div>
+                                </div>
+                            </md-input-container>
+
+
+                             <md-input-container class="md-block" flex-gt-sm>
+                                <label>Stock</label>
+                                <input name="stock" ng-model="medicamento.stock" required>
+                                <div ng-messages="dForm.stock.$error">
+                                    <div ng-message="required">This is required.</div>
+                                </div>
+                            </md-input-container>
+                            
+                        
+                        <md-input-container class="md-block" flex-gt-sm>
+                                <label>Precio Compra</label>
+                                <input name="preciocompra" ng-model="medicamento.preciocompra" required>
+                                <div ng-messages="dForm.preciocompra.$error">
+                                    <div ng-message="required">This is required.</div>
+                                </div>
+                            </md-input-container>
+                           
+                
+                        </div>
+
+                         <div class="sorter">
+                                tipo medicamento: 
+                                <select ng-model="sorting">
+                                    <option value="-Price">Pastilla</option>
+                                    <option value="Price">Inyeccion</option>
+                                    <option value="Name">Jarave</option>
+                                    <option value="-Name">vitamina</option>
+                                    <option value="-Name">otro</option>
+                                </select> 
+                            </div>
+                              <md-input-container class="md-block">
+                            <md-input-container class="md-block" flex-gt-sm>
+                                <label>Fecha de registro</label>
+                                <md-datepicker name="fecha" ng-model="medicamento.fecha"></md-datepicker>
+                                <div ng-messages="dForm.fecha.$error">
+                                    <div ng-message="valid">Not a valid date!.</div>
+                                </div>
+                            </md-input-container>
+                        </md-input-container>
+
+
+
+                    </md-card-content>
+                    <md-divider></md-divider>
+                    <md-card-actions layout="row" layout-xs="column" layout-align="start center">
+                        <md-card-icon-actions>
+                            <md-button class="md-icon-button" aria-label="toggle">
+                                <md-icon md-svg-icon="md-toggle-arrow"></md-icon>
+                            </md-button>
+                        </md-card-icon-actions>
+                        <md-button type="reset" ng-click="cancel()" class="md-raised">Cancelar</md-button>
+                        <md-button type="submit" ng-click="save()" class="md-raised md-primary">
+                            <span ng-show="medicamento.id == null">Crear</span>
+                            <span ng-show="medicamento.id">Actualizar</span>
+                        </md-button>
+                    </md-card-actions>
+                </md-card>
+            </form>
+        </div>
+    </md-content>
+</div>

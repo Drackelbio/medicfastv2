@@ -1,5 +1,5 @@
 {
-    "name": "medicfast",
+    "name": "pydev",
     "version": "1.0.0",
     "description": "desc",
     "main": "gulpfile.js",
@@ -14,6 +14,6 @@
     "keywords": [
         "gulp"
     ],
-    "author": "centro-medico",
+    "author": "devhres",
     "license": "ISC"
 }

@@ -1,0 +1,3 @@
+[2016-10-17 16:00:45] [INFO] [ioteca_service_apps.auths_api.UserView:77] [/api/auths/localuserinfo/] [127.0.0.1] [admin] [GET] User is authenticated
+[2016-10-17 18:11:56] [INFO] [ioteca_service_apps.auths_api.MenuView:53] [/api/auths/menus/?page=1&page_size=5] [127.0.0.1] [admin] [GET] !!Writing in log file!!
+[2016-10-17 18:11:56] [INFO] [ioteca_service_apps.auths_api.MenuView:53] [/api/auths/menus/?page=1&page_size=5] [127.0.0.1] [admin] [GET] !!Writing in log file!!

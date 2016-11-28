@@ -1,0 +1,580 @@
+/* 
+* 
+*/
+
+html {
+    background-color: #efefef;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.42857143;
+    color: rgba(0, 0, 0, 0.87);
+    background-color: transparent;
+}
+
+.navbar {
+    position: relative;
+    z-index: 50;
+    min-height: 64px;
+    margin: 0;
+    border: none;
+}
+
+.navbar .navbar-nav > li > a,
+.navbar .navbar-tool > li > a,
+.navbar .navbar-item,
+.navbar .navbar-brand {
+    padding: 0 16px;
+    line-height: 64px;
+}
+
+.navbar .navbar-tool > li {
+    float: left;
+}
+
+.navbar .navbar-brand {
+    display: block;
+    float: none;
+    min-height: 64px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.navbar .navbar-brand:hover {
+    text-decoration: none;
+}
+
+.navbar .navbar-brand img,
+.navbar .navbar-brand svg {
+    display: inline-block;
+    vertical-align: -10%;
+}
+
+@media (max-width: 991px) {
+    .navbar {
+        min-height: 56px;
+    }
+    .navbar .navbar-brand {
+        min-height: 56px;
+    }
+    .navbar .navbar-nav > li > a,
+    .navbar .navbar-tool > li > a,
+    .navbar .navbar-item,
+    .navbar .navbar-brand {
+        line-height: 56px;
+    }
+}
+
+.box {
+    display: table;
+    width: 100%;
+    height: 100%;
+    border-spacing: 0;
+    table-layout: fixed;
+}
+
+.box .box-row {
+    display: table-row;
+    height: 100%;
+}
+
+.box .box-row .box-cell {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.ie .box .box-row .box-cell {
+    display: table-cell;
+}
+
+.box .box-col {
+    display: table-cell;
+    vertical-align: top;
+}
+
+.box .box-inner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.box > [class*="col-"],
+.box > [class*=" col-"] {
+    position: static;
+    float: none;
+    height: 100%;
+    padding: 0;
+    vertical-align: top;
+}
+
+@media (min-width: 1200px) {
+    .box > [class*="col-lg"],
+    .box > [class*=" col-lg"] {
+        display: table-cell;
+    }
+}
+
+@media (min-width: 992px) {
+    .box > [class*="col-md"],
+    .box > [class*=" col-md"] {
+        display: table-cell;
+    }
+}
+
+@media (min-width: 768px) {
+    .box > [class*="col-sm"],
+    .box > [class*=" col-sm"] {
+        display: table-cell;
+    }
+}
+
+@media (max-width: 767px) {
+    .box > [class*="col-xs"],
+    .box > [class*=" col-xs"] {
+        display: table-cell;
+    }
+    .box .box-inner {
+        position: relative !important;
+    }
+}
+
+
+/*layout*/
+
+.content-reset {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.app {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.modal-open .app {
+    overflow: hidden;
+}
+
+.app-aside {
+    position: absolute !important;
+    top: 0;
+    bottom: 0;
+    z-index: 60;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #efefef;
+    opacity: 1;
+    box-shadow: 0 64px 5px 0 rgba(0, 0, 0, 0.26);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.app-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    overflow-y: auto;
+}
+
+@media (min-width: 992px) {
+    .app-aside {
+        display: block !important;
+        width: 240px;
+    }
+    .app-aside.folded {
+        width: 0px;
+    }
+    .app-aside.folded ~ .app-content {
+        margin-left: 0px;
+    }
+    .app-aside ~ .app-content {
+        margin-left: 240px;
+    }
+    .app-aside.md-sidenav-left {
+        min-width: 0;
+        -webkit-transform: translate3d(0, 0, 0) !important;
+        transform: translate3d(0, 0, 0) !important;
+    }
+    .app-aside .left {
+        -webkit-transform: translate3d(0, 0, 0) !important;
+        transform: translate3d(0, 0, 0) !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .app-aside.modal {
+        z-index: 1050;
+    }
+    .app-aside .left {
+        max-width: 304px;
+    }
+    .app-padding {
+        padding: 4px 4px;
+    }
+}
+
+.pull-right {
+    float: right !important;
+}
+
+.pull-left {
+    float: left !important;
+}
+
+
+/*Charts*/
+
+.bg-white {
+    background-color: #fff;
+}
+
+.no-border {
+    border-color: transparent;
+    border-width: 0;
+}
+
+.no-borders {
+    border-width: 0 !important;
+}
+
+@media (max-width: 991px) {
+    .no-border-sm {
+        border-width: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .no-border-xs {
+        border-width: 0;
+    }
+}
+
+.padding {
+    padding: 32px 32px;
+}
+
+.padding-out {
+    margin: -32px -32px;
+}
+
+@media (max-width: 992px) {
+    .padding {
+        padding: 16px 16px;
+    }
+    .padding-out {
+        margin: -16px -16px;
+    }
+}
+
+@media (max-width: 767px) {
+    .padding {
+        padding: 8px 8px;
+    }
+    .padding-out {
+        margin: -8px -8px;
+    }
+}
+
+
+/* scrollable*/
+
+.scrollable {
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.scrollable.hover {
+    overflow-y: hidden !important;
+}
+
+.scrollable.hover > * {
+    margin-top: -1px;
+}
+
+.scrollable.hover:hover {
+    overflow: visible !important;
+    overflow-y: auto !important;
+}
+
+.smart .scrollable {
+    overflow-y: auto !important;
+}
+
+.scroll-x,
+.scroll-y {
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+.scroll-y {
+    overflow-y: auto;
+}
+
+.scroll-x {
+    overflow-x: auto;
+}
+
+
+/* / scrollable*/
+
+
+/* Menu main*/
+
+.nav {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    overflow-x: hidden;
+}
+
+.nav > li {
+    position: relative;
+    display: block;
+}
+
+.nav > li > a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+    text-decoration: none;
+    background-color: #eee;
+}
+
+.nav > li.disabled > a {
+    color: #777;
+}
+
+.nav > li.disabled > a:hover,
+.nav > li.disabled > a:focus {
+    color: #777;
+    text-decoration: none;
+    cursor: not-allowed;
+    background-color: transparent;
+}
+
+.nav .open > a,
+.nav .open > a:hover,
+.nav .open > a:focus {
+    background-color: #eee;
+    border-color: #337ab7;
+}
+
+.nav .nav-divider {
+    height: 1px;
+    margin: 9px 0;
+    overflow: hidden;
+    background-color: #e5e5e5;
+}
+
+.nav > li > a > img {
+    max-width: none;
+}
+
+nav ul.nav li {
+    position: relative;
+}
+
+nav ul.nav li li a {
+    padding-left: 72px;
+    line-height: 36px;
+}
+
+nav ul.nav li li a .badge,
+nav ul.nav li li a .label {
+    margin-top: 10px;
+}
+
+nav ul.nav li li li a {
+    padding-left: 88px;
+}
+
+nav ul.nav li li li li a {
+    padding-left: 106px;
+}
+
+nav ul.nav li a,
+nav ul.nav li .nav-item {
+    position: relative;
+    display: block;
+    padding: 0 16px;
+    font-weight: normal;
+    line-height: 40px;
+    text-align: left;
+    text-transform: none;
+    border-radius: 0 !important;
+}
+
+nav ul.nav li a .text,
+nav ul.nav li .nav-item .text {
+    margin-left: 16px;
+}
+
+nav ul.nav li a .up,
+nav ul.nav li .nav-item .up {
+    z-index: 1;
+    margin-left: 16px;
+    font-style: normal;
+}
+
+nav ul.nav li a > .pull-right ng-md-icon,
+nav ul.nav li .nav-item > .pull-right ng-md-icon {
+    margin-left: 16px;
+    -webkit-transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+}
+
+nav ul.nav li a > .icon,
+nav ul.nav li .nav-item > .icon {
+    top: 0;
+    float: left;
+    min-width: 40px;
+    margin-right: 16px;
+    line-height: inherit;
+}
+
+nav ul.nav li a > .icon:before,
+nav ul.nav li .nav-item > .icon:before {
+    display: inline-block;
+    width: 24px;
+    text-align: center;
+    opacity: 0.75;
+}
+
+nav ul.nav li a:hover,
+nav ul.nav li .nav-item:hover,
+nav ul.nav li a:focus,
+nav ul.nav li .nav-item:focus {
+    background-color: rgba(158, 158, 158, 0.2);
+}
+
+nav ul.nav li label {
+    display: block;
+}
+
+nav ul.nav li label i {
+    margin-right: 48px;
+    margin-left: -16px;
+}
+
+nav ul.nav li.active {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+nav ul.nav li.active > a {
+    background-color: transparent;
+}
+
+nav ul.nav li.active > a > .pull-right ng-md-icon {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+nav ul.nav.nav-stacked a,
+nav ul.nav.nav-stacked .nav-header {
+    padding: 0 16px;
+    line-height: 30px;
+}
+
+nav .nav-header {
+    padding: 0 16px;
+    line-height: 40px;
+}
+
+nav .nav-header:hover,
+nav .nav-header:focus {
+    background-color: transparent !important;
+}
+
+.nav-sub {
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: max-height 0.5s cubic-bezier(0.35, 0, 0.25, 1);
+    transition: max-height 0.5s cubic-bezier(0.35, 0, 0.25, 1);
+}
+
+.nav-sub .md-ripple-container {
+    display: none;
+    visibility: hidden;
+}
+
+.active > .nav-sub {
+    max-height: 999px;
+}
+
+.active > .nav-sub .md-ripple-container {
+    display: block;
+    visibility: visible;
+}
+
+.badge {
+    display: inline-block;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    background-color: #777;
+    border-radius: 10px;
+}
+
+.badge:empty {
+    display: none;
+}
+
+
+/* / menu main*/
+
+a {
+    /*color: inherit;*/
+    text-decoration: none;
+    cursor: pointer;
+    outline: 0;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+
+
+
+
+
+
+md-dialog.main {
+    max-width: 95%;
+    max-height: 95%;
+}
+
+/*
+ * Para el input buscar de la tabla del CRUD
+ */
+.md-search {
+ 
+  height: 10px;
+}

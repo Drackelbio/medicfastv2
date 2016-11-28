@@ -1,11 +1,16 @@
-﻿var baseUrl = 'http://localhost:9001/';
-var loginUrl = 'http://localhost:9000/auth_web/';
-var iotecaUrl = 'http://localhost:9000/medicfast_web/';
+﻿var baseUrl = 'http://localhost:9000/';
+var loginUrl = 'http://localhost:9001/auth_web/';
+var iotecaUrl = 'http://localhost:9001/medicfastv2_web/';
 
 
-var client_id = 'I2oDvNlk4BxRuUzibhPdDrT6FwFFs20ZXfzB3kpC';
-var client_secret = 'R926GdoJdutqWFBIfE7YD7DcXgbQZWvC5YpBJpM3Smc9X61lMJvOkfNuf350i6XgRslieDz3fIb3stHQwFBMovNRLvBAgxSrSSTZyTbJdpNJJMBiobppvx41NvDUApee';
-var grant_type = 'password';
+
+var clientId = 'XHJWk31Fzj0uLmx49TZ8zJ1Dti31HAUTKrPNuf65';
+var clientSecret = 'Av52eK3zoqO3V58bZ1wEeOFjuQKvT71SAYfpdS2KQZpvBFWV7kIcqJg0gfTkLN6kMnzfPhLyqmKT2RyhLqFn0jg4UhKdCtihQtDSs97YJqinS4OneDZ3ttYHUc806rdR';
+
+//var clientId = 'BtcnWAnOUSJRFsf8FsUXKoKM1AW7gpceaf8EzAdW';
+//var clientSecret = 'HBLysSgXM95jr2GY9RBKrNO426Z8Z3pLf6YQxxptLc2q0209Zid04dtaKc25gkDI6SfolMFxFXPmL3NbBWWM5bZvEqO0ZrLo9a0brGX4kxtzvyU4Az3eLw6cfoNeyA0r';
+//b7d34f76970a357c3b5ebbdd14aeb54acac9c10b
+var grantType = 'password';
 
 var config = {
 
@@ -13,9 +18,9 @@ var config = {
     loginUrl: loginUrl,
     iotecaUrl: iotecaUrl,
 
-    client_id: client_id,
-    client_secret: client_secret,
-    grant_type: grant_type,
+    clientId: clientId,
+    clientSecret: clientSecret,
+    grantType: grantType,
 
 };
 

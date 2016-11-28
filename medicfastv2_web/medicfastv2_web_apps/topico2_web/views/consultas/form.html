@@ -1,0 +1,96 @@
+<div ng-cloak>
+    <md-content class="md-padding" layout-xs="column" layout="row">
+        <div flex-xs flex-gt-xs="100" layout="column">
+            <form name="dForm" role="form" ng-controller="ConsultaSaveCtrl"> 
+                <md-card>
+                    <md-card-header>
+                        <md-card-avatar>
+                            <img class="md-user-avatar" src="media/img/his.jpg" />
+                        </md-card-avatar>
+                        <md-card-header-text>
+                           
+                            <span class="md-headline">Consultas institucionales</span>
+                            <span class="md-subhead">consultas realizadas </span>
+                        </md-card-header-text>
+                    </md-card-header>
+
+                         <md-divider></md-divider>
+                    <md-card-content>
+                        <div layout-gt-sm="row">
+                            
+                            <md-divider></md-divider>
+                            <md-input-container class="md-block"  flex-gt-sm>
+                              
+                                <input placeholder="enfermedad actual" name="enfermedadactual" ng-model="consulta.enfermedadactual" required>
+                                <div ng-messages="dForm.enfermedadactual.$error">
+                                    <div ng-message="required">This is required.</div>
+                                </div>
+                            </md-input-container>
+                            <md-divider></md-divider>
+
+                             </div>
+
+                             <div layout-gt-sm="row">
+                          <md-divider></md-divider>
+                            <md-input-container class="md-block"  flex-gt-sm>
+                              
+                                <input placeholder="Examen Fisico" name="examenfisico" ng-model="consulta.examenfisico" required>
+                                <div ng-messages="dForm.examenfisico.$error">
+                                    <div ng-message="required">This is required.</div>
+                                </div>
+                            </md-input-container>
+                                 <md-divider></md-divider>
+                                  </div>
+
+
+
+                             <div layout-gt-sm="row">
+
+                                <md-divider></md-divider>
+                            <md-input-container class="md-block"  flex-gt-sm>
+                              
+                                <input placeholder="Diagnostico" name="diagnostico" ng-model="consulta.diagnostico" required>
+                                <div ng-messages="dForm.diagnostico.$error">
+                                    <div ng-message="required">This is required.</div>
+                                </div>
+                            </md-input-container>
+                            <md-divider></md-divider>
+                            </div>
+
+
+                             <div layout-gt-sm="row">
+                                <md-divider></md-divider>
+                             <md-input-container class="md-block" flex-gt-sm>
+                                <md-checkbox ng-model="consulta.suministrar" aria-label="administrar">
+                                    Administrado
+                                </md-checkbox>
+                            </md-input-container>
+                           
+
+                            <md-input-container class="md-block" flex-gt-sm>
+                                <md-checkbox ng-model="consulta.estado" aria-label="Estado">
+                                    Estado
+                                </md-checkbox>
+                            </md-input-container>
+                            <md-divider></md-divider>
+
+                     </div>
+                    </md-card-content>
+                    <md-divider></md-divider>
+                    <md-card-actions layout="row" layout-xs="column" layout-align="start center">
+                        <md-card-icon-actions>
+                            <md-button class="md-icon-button" aria-label="toggle">
+                                <md-icon md-svg-icon="md-toggle-arrow"></md-icon>
+                            </md-button>
+                        </md-card-icon-actions>
+                        <md-button type="reset" ng-click="cancel()" class="md-raised">Cancelar</md-button>
+                        <md-button type="submit" ng-click="save()" class="md-raised md-primary">
+                            <span ng-show="consulta.id == null">Crear</span>
+                            <span ng-show="consulta.id">Actualizar</span>
+                        </md-button>
+                    </md-card-actions>
+                </md-card>
+            </form>
+        </div>
+    </md-content>
+</div>

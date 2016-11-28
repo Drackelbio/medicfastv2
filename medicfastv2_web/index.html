@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+    <meta charset="UTF-8">
+    <title ng-bind="$state.current.data.section + ($state.current.data.section === Null ? '' : ' > ') +
+        $state.current.data.page">
+    </title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <meta name="viewport" content="initial-scale=1" />
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css" type="text/css" />
+    <link rel="stylesheet" href="bower_components/angular-material-icons/angular-material-icons.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="bower_components/angular-toastr/dist/angular-toastr.css" />
+    <link rel="stylesheet" href="static/styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="static/styles/table.css" type="text/css" />
+</head>
+
+<body>
+    <div class="app" ui-view ng-controller="MainCtrl"></div>
+    <!-- 3rd-Party packages -->
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.min.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.min.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="bower_components/angular-material/angular-material.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+    <script src="bower_components/angular-material-icons/angular-material-icons.min.js"></script>
+    <script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
+    <script src="bower_components/angular-toastr/dist/angular-toastr.tpls.js"></script>
+    <script type="text/javascript" src="bower_components/moment/min/moment.min.js"></script>
+    <!-- my component packages -->
+    <script src="static/scripts/angular-devhres.js"></script>
+    <!-- main app -->
+    <script src="app/app.js"></script>
+    <script src="app/config.js"></script>
+    <script src="app/router.js"></script>
+    <script src="app/services/authService.js"></script>
+    <script src="app/services/authInterceptorService.js"></script>
+    <script src="app/services/menuService.js"></script>
+    <script src="app/controllers/main.js"></script>
+    <!-- ui_web app -->
+    <script src="medicfastv2_web_apps/ui_web/router.js"></script>
+    <script src="medicfastv2_web_apps/ui_web/controllers/nom.js"></script>
+    <script src="medicfastv2_web_apps/ui_web/controllers/pag.js"></script>
+    <script src="medicfastv2_web_apps/ui_web/controllers/dir.js"></script>
+    <!-- auths_web app -->
+    <script src="medicfastv2_web_apps/auths_web/config.js"></script>
+    <script src="medicfastv2_web_apps/auths_web/router.js"></script>
+    <script src="medicfastv2_web_apps/auths_web/services/authsService.js"></script>
+    <script src="medicfastv2_web_apps/auths_web/controllers/menu.js"></script>
+    <script src="medicfastv2_web_apps/auths_web/controllers/permission.js"></script>
+    <script src="medicfastv2_web_apps/auths_web/controllers/log.js"></script>
+    <!-- catalogo_web app -->
+    <script src="medicfastv2_web_apps/catalogo_web/config.js"></script>
+    <script src="medicfastv2_web_apps/catalogo_web/services/catalogoService.js"></script>
+    <script src="medicfastv2_web_apps/catalogo_web/controllers/categorias.js"></script>
+    <script src="medicfastv2_web_apps/catalogo_web/controllers/autores.js"></script>
+    <!-- topico_web app 
+    <script src="medicfastv2_web_apps/topico/route.js"></script>
+    <script src="medicfastv2_web_apps/ui_web/controllers/nom.js"></script>
+    <script src="medicfastv2_web_apps/topico/config.js"></script>
+    <script src="medicfastv2_web_apps/topico/services/topicoService.js"></script>
+    <script src="medicfastv2_web_apps/topico/controllers/departamentos.js"></script>
+-->
+
+
+    <script src="medicfastv2_web_apps/topico2_web/config.js"></script>
+    <script src="medicfastv2_web_apps/topico2_web/services/topico2Service.js"></script>
+    <script src="medicfastv2_web_apps/topico2_web/controllers/historias.js"></script>
+    <script src="medicfastv2_web_apps/topico2_web/controllers/medicamentos.js"></script>
+    <script src="medicfastv2_web_apps/topico2_web/controllers/tratamientos.js"></script>
+    <script src="medicfastv2_web_apps/topico2_web/controllers/consultas.js"></script>
+    <script src="medicfastv2_web_apps/topico2_web/controllers/diagnosticos.js"></script>
+    <script src="medicfastv2_web_apps/topico2_web/controllers/especificacionrecetas.js"></script>
+</body>
+
+</html>

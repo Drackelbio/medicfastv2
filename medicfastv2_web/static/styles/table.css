@@ -1,0 +1,197 @@
+.md-table-pagination {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+md-table-container {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+
+/*línea a la fila*/
+
+table td {
+    color: rgba(0, 0, 0, 0.87);
+    border-top: 1px rgba(0, 0, 0, 0.12) solid;
+}
+
+
+/*hover a la fila*/
+
+table tbody > tr:not([disabled]):hover {
+    background-color: #eeeeee !important;
+}
+
+
+/*select del pagination*/
+
+md-select.md-table-select {
+    margin: 0;
+}
+
+md-select.md-table-select > .md-select-value {
+    padding: 0 0 0 24px;
+    min-width: initial;
+    min-height: 24px;
+    border-bottom: 0 !important;
+}
+
+md-select.md-table-select > .md-select-value > span {
+    height: auto;
+    -webkit-transform: none !important;
+    transform: none !important;
+}
+
+md-select.md-table-select > .md-select-value > span.md-select-icon {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 24px;
+    margin: 5px;
+}
+
+md-select.md-table-select > .md-select-value > span.md-select-icon:after {
+    top: initial;
+}
+
+
+/* /select del pagination*/
+
+
+/* page foot*/
+
+tfoot ul {
+    margin: 0px;
+    padding: 0px;
+    float: right;
+}
+
+tfoot ul li {
+    display: inline;
+    float: left;
+    list-style: none;
+    padding: 2px;
+    border-radius: 5px;
+    cursor: pointer;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+tfoot li a {
+    color: #fff;
+    text-decoration: none;
+    color: #212121;
+    padding: 5px;
+}
+
+tfoot li a:hover {
+    text-decoration: none;
+}
+
+.myactive {
+    color: white;
+    background-color: #BA68C8;
+}
+
+
+/* end page foot*/
+
+
+/* footer pagination*/
+
+table tfoot td {
+    padding: 5px 24px 5px 5px;
+}
+
+table.table-responsive {
+    width: 100%;
+    border-spacing: 0;
+    overflow: hidden;
+    color: #03A9F4;
+    text-align: center;
+
+    
+
+
+
+}
+
+td,
+th {
+    padding: 8px 3px;
+    text-align: left;
+    border-radius: 2px;
+}
+
+@media screen and (max-width: 600px) {
+    table.table-responsive caption {
+        background-image: none;
+    }
+    table.table-responsive thead {
+        display: none;
+    }
+    table.table-responsive tbody td {
+        display: block;
+        padding: .6rem;
+    }
+    table.table-responsive tbody tr td:first-child {
+        background: #666;
+        color: #fff;
+    }
+    table.table-responsive tbody td:before {
+        content: attr(data-title);
+        position: relative;
+        left: 2px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: bold;
+    }
+}
+
+
+/*
+* Para los td de las tablas, para los buttons
+*/
+
+.md-button.md-td {
+    min-height: 6px;
+    min-width: 8px;
+}
+
+.md-button.md-icon-button.md-td {
+    height: 34px;
+}
+
+
+/*
+* Fin para los td de las tablas
+*/
+
+md-progress-circular { /* overlay circle spinner */
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    margin: -15px 0 0 -15px;
+    width: 30px;
+    height: 30px;
+    border-right-color: transparent;
+    border-radius: 50%;
+    opacity: 10;
+}

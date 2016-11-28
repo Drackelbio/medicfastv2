@@ -1,0 +1,1 @@
+[2016-11-02 09:02:23] [INFO] [ioteca_service_apps.auths_api.user_view:77] [/api/auths/localuserinfo/] [127.0.0.1] [admin] [GET] User is authenticated

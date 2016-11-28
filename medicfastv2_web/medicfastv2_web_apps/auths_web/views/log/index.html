@@ -1,0 +1,69 @@
+<div ng-cloak>
+    <md-content class="md-padding" layout-xs="column">
+        <div flex-xs flex-gt-xs>
+            <md-card ng-controller="LogCtrl">
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-headline">Revisión de archivos log</span>
+                        <span class="md-subhead">logs del {{ query | date:'yyyy-MM-dd'}} </span>
+                    </md-card-title-text>
+                </md-card-title>
+                
+                <md-divider></md-divider>
+                
+                
+
+
+                <md-table-container>
+                    <md-progress-linear layout-fill md-mode="indeterminate" ng-hide="!isLoading"></md-progress-linear>
+
+                    
+
+                    <table table-responsive>
+                        <md-card-actions layout="row" layout-align="start center" layout-xs="column">
+                            <md-card-icon-actions>
+                                
+                            </md-card-icon-actions>
+                            <span flex></span>
+                            <md-card-icon-actions layout-align="end center">
+                                <md-datepicker ng-model="query" md-placeholder="Enter date" ng-change="buscar()"></md-datepicker>
+                                <md-button class="md-icon-button" aria-label="Share">
+                                    <ng-md-icon icon="more_vert" aria-label="title"></ng-md-icon>
+                                </md-button>
+                            </md-card-icon-actions>
+                        </md-card-actions>
+                        <md-divider></md-divider>
+                        <thead  md-on-reorder="onReorder">
+                            <tr>
+                                <th>#</th>
+                                <th >hora</th>
+                                <th >type</th>
+                                <th>desc</th>
+                                <th>ip</th>
+                                <th>user</th>
+                                <th>method</th>
+                                <th>mod:line</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="d in lista">
+                                <td>{{ $index +1 }}</td>
+                                <td> {{ d.date.substr(11)  }}</td>
+                                <td> {{ d.type }}</td>
+                                <td> {{ d.desc }}</td>
+                                <td> {{ d.ip + "" + d.path }}</td>
+                                <td> {{ d.user }}</td>
+                                <td> {{ d.method }}</td>
+                                <td> {{ d.mod }}</td>
+                                
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                </md-table-container>
+                
+            </md-card>
+        </div>
+    </md-content>
+</div>

@@ -1,0 +1,208 @@
+ver app_pagination2.html
+
+pagesInRange[0].page={{pagesInRange[0].page}}<br>
+firstPageInRange[0].cp.page={{firstPageInRange[0].cp.page}}<br><br>
+
+pagesInRange[pagesInRange.length-1].page={{pagesInRange[pagesInRange.length-1].page}}<br>
+lastPageInRange[0].cp.page = {{ lastPageInRange[0].cp.page}}<br>
+
+
+<md-input-container>
+    <label>Page</label>
+    <md-select ng-model="page">
+        <md-option ng-show="pagesInRange[0].page != 1" ng-value="{{firstPageInRange[0].cp.page}}" >
+            {{firstPageInRange[0].cp.page}}
+        </md-option>
+
+
+        <md-option ng-repeat="p in pagesInRange" ng-value="{{p.page}}">
+            {{p.page}}
+        </md-option>
+
+        <md-option ng-show="pagesInRange[pagesInRange.length-1].page != pages"  ng-value="{{lastPageInRange[0].cp.page}}">
+            {{lastPageInRange[0].cp.page}}
+        </md-option>
+
+    </md-select>
+</md-input-container>
+
+
+
+
+<md-input-container>
+    <label>Page</label>
+    <md-select ng-model="page">
+
+        <md-option ng-repeat="ecq in Pagination" value="{{ecq.value}}">
+            {{ecq.value}}
+        </md-option>
+
+
+    </md-select>
+</md-input-container>
+
+
+
+
+<ul >
+    <li ng-disabled="prevParams.page == 0" ng-click="listpag(startParams,startParams.page)">
+        |<
+    </li>
+    <li>
+        <md-button aria-label="Settings" ng-disabled="prevParams.page == 0" data-ng-click="listpag(prevParams,prevParams.page)">
+            <
+        </md-button>
+
+    </li>
+
+    <li ng-show="pagesInRange[0].page != 1" ng-click="listpag(firstPageInRange[0].cp,firstPageInRange[0].cp.page)">
+        ...
+    </li>
+
+    <li ng-repeat="p in pagesInRange" ng-class="{'myactive': p.page == page}" ng-click="listpag(p.params,p.page)">
+        <span ng-bind="p.page"></span>
+    </li>
+
+    <li ng-show="pagesInRange[pagesInRange.length-1].page != pages" ng-click="listpag(lastPageInRange[0].cp,lastPageInRange[0].cp.page)">
+        ...
+    </li>
+
+    <li disabled="nextParams.page > pages" ng-click="listpag(nextParams,nextParams.page)">
+        >
+    </li>
+    <li disabled="nextParams.page > pages" ng-click="listpag(endParams,endParams.page)">
+        >|
+    </li>
+
+
+</ul>
+
+
+
+
+
+
+    <div layout="row"  layout-align="center center" layout-wrap class="paginacion">
+        <md-button aria-label="Settings" ng-disabled="prevParams.page == 0" data-ng-click="listpag(startParams,startParams.page)">
+            <ng-md-icon icon="skip_previous" size="24"></ng-md-icon>
+        </md-button>
+        <md-button  aria-label="Settings" ng-disabled="prevParams.page == 0" data-ng-click="listpag(prevParams,prevParams.page)">
+            <ng-md-icon icon="fast_rewind" size="24"></ng-md-icon>
+        </md-button>
+
+
+        <md-button  aria-label="Settings" ng-show="pagesInRange[0].page != 1" data-ng-click="listpag(firstPageInRange[0].cp,firstPageInRange[0].cp.page)">
+            ...
+        </md-button>
+        <div ng-repeat="p in pagesInRange">
+            <md-button  ng-class="{'md-primary': p.page == page}" data-ng-click="listpag(p.params,p.page)">
+                {{p.page}}
+            </md-button>
+        </div>
+        <md-button  aria-label="Settings" ng-show="pagesInRange[pagesInRange.length-1].page != pages" data-ng-click="listpag(lastPageInRange[0].cp,lastPageInRange[0].cp.page)">
+            ...
+        </md-button>
+
+        
+        <md-button  aria-label="Settings" data-ng-click="listpag(nextParams,nextParams.page)" ng-disabled="nextParams.page > pages">
+            <ng-md-icon icon="fast_forward" size="24"></ng-md-icon>
+        </md-button>
+        <md-button  aria-label="Settings" data-ng-click="listpag(endParams,endParams.page)" ng-disabled="nextParams.page > pages">
+            <ng-md-icon icon="skip_next" size="24"></ng-md-icon>
+        </md-button>
+        
+        <md-select ng-model="per" ng-change="listpag(startParams,startParams.page)">
+            <md-option value="0">All</md-option>
+            <md-option value="2">2</md-option>
+            <md-option value="5">5</md-option>
+            <md-option value="20">20</md-option>
+        </md-select> items per page
+        <span flex></span>
+        <span ng-bind="rango"></span>
+
+    </div>
+
+
+
+
+
+
+
+<md-table-pagination>
+                    <table>
+                        <tfoot>
+                            <tr>
+                                <td colspan="10">
+                                    <mi-pagination page="options.page" pages="options.pages" next="options.next" previous="options.previous" rango="options.range" activado="myactive" accion="list(params)" query="query">
+                                    </mi-pagination>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </md-table-pagination>
+                
+
+
+
+
+    <div layout="row"  layout-align="center center" layout-wrap class="paginacion">
+
+<ul >
+    <li>
+        <md-button aria-label="Settings" ng-disabled="prevParams.page == 0" data-ng-click="listpag(startParams,startParams.page)">
+            <<
+        </md-button>
+    </li>
+    <li>
+        <md-button aria-label="Settings" ng-disabled="prevParams.page == 0" data-ng-click="listpag(prevParams,prevParams.page)">
+            <
+        </md-button>
+
+    </li>
+
+    <li ng-show="pagesInRange[0].page != 1">
+        <md-button aria-label="Settings" ng-show="pagesInRange[0].page != 1" data-ng-click="listpag(firstPageInRange[0].cp,firstPageInRange[0].cp.page)">
+            ...
+        </md-button>
+    </li>
+
+    <li ng-repeat="p in pagesInRange"  >
+        <md-button  ng-class="{'myactive': p.page == page}" data-ng-click="listpag(p.params,p.page)">
+                {{p.page}}
+            </md-button>
+    </li>
+
+    <li ng-show="pagesInRange[pagesInRange.length-1].page != pages">
+         <md-button aria-label="Settings" ng-show="pagesInRange[pagesInRange.length-1].page != pages" data-ng-click="listpag(lastPageInRange[0].cp,lastPageInRange[0].cp.page)">
+            ...
+        </md-button>
+    </li>
+
+    <li>
+        <md-button aria-label="Settings" data-ng-click="listpag(nextParams,nextParams.page)" ng-disabled="nextParams.page > pages">
+            >
+        </md-button>
+        
+    </li>
+    <li>
+        <md-button  aria-label="Settings" data-ng-click="listpag(endParams,endParams.page)" ng-disabled="nextParams.page > pages">
+            >>
+        </md-button>
+    </li>
+
+</ul>
+
+
+        <md-select ng-model="per" ng-change="listpag(startParams,startParams.page)">
+            <md-option value="0">All</md-option>
+            <md-option value="2">2</md-option>
+            <md-option value="5">5</md-option>
+            <md-option value="20">20</md-option>
+        </md-select> 
+
+
+        <span flex></span>
+        <span ng-bind="rango"></span>
+
+
+    </div>                

@@ -1,0 +1,839 @@
+[2016-11-20 00:37:57] DEBUG [django.db.backends:90] (0.001) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[2016-11-20 00:37:57] DEBUG [django.db.backends:90] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[2016-11-20 00:39:35] DEBUG [django.db.backends:90] (0.003) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2016-11-20 05:39:35.830242' AND "django_session"."session_key" = 'tte7gjfz4bmwgr3tggzw5o6r3ou1cyfi'); args=('2016-11-20 05:39:35.830242', 'tte7gjfz4bmwgr3tggzw5o6r3ou1cyfi')
+[2016-11-20 00:39:35] DEBUG [django.db.backends:90] (0.000) SELECT "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by" FROM "auths_user" WHERE "auths_user"."id" = '01e659bc77a5436f9fc859d23a77e6aa'; args=('01e659bc77a5436f9fc859d23a77e6aa',)
+[2016-11-20 00:39:35] DEBUG [django.template:929] Exception while resolving variable 'is_popup' in template 'admin/index.html'.
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\context.py", line 75, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in "[{'False': False, 'None': None, 'True': True}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x04235A50>>, 'request': <WSGIRequest: GET '/admin/'>, 'user': <SimpleLazyObject: <User: admin>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x0478F970>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x042883B0>, 'DEFAULT_MESSAGE_LEVELS': {'WARNING': 30, 'DEBUG': 10, 'ERROR': 40, 'INFO': 20, 'SUCCESS': 25}}, {}, {'app_list': [{'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03530730>, 'app_url': '/admin/auth/', 'has_module_perms': True, 'models': [{'add_url': '/admin/auth/group/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x041EAE10>, 'admin_url': '/admin/auth/group/', 'object_name': 'Group', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/auth/permission/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x042B5FD0>, 'admin_url': '/admin/auth/permission/', 'object_name': 'Permission', 'perms': {'add': True, 'delete': True, 'change': True}}], 'app_label': 'auth'}, {'name': 'Auths', 'app_url': '/admin/auths/', 'has_module_perms': True, 'models': [{'add_url': '/admin/auths/hierarchytype/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x042B5C90>, 'admin_url': '/admin/auths/hierarchytype/', 'object_name': 'HierarchyType', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/auths/hierarchy/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x042B5B50>, 'admin_url': '/admin/auths/hierarchy/', 'object_name': 'Hierarchy', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/auths/menu/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x042B5710>, 'admin_url': '/admin/auths/menu/', 'object_name': 'Menu', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/auths/person/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x042B5750>, 'admin_url': '/admin/auths/person/', 'object_name': 'Person', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/auths/userhierarchygroup/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x042B5890>, 'admin_url': '/admin/auths/userhierarchygroup/', 'object_name': 'UserHierarchyGroup', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/auths/userhierarchypermission/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x042B5ED0>, 'admin_url': '/admin/auths/userhierarchypermission/', 'object_name': 'UserHierarchyPermission', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/auths/user/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x041EAF10>, 'admin_url': '/admin/auths/user/', 'object_name': 'User', 'perms': {'add': True, 'delete': True, 'change': True}}], 'app_label': 'auths'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03530850>, 'app_url': '/admin/contenttypes/', 'has_module_perms': True, 'models': [{'add_url': '/admin/contenttypes/contenttype/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x041EAFF0>, 'admin_url': '/admin/contenttypes/contenttype/', 'object_name': 'ContentType', 'perms': {'add': True, 'delete': True, 'change': True}}], 'app_label': 'contenttypes'}, {'name': 'Django OAuth Toolkit', 'app_url': '/admin/oauth2_provider/', 'has_module_perms': True, 'models': [{'add_url': '/admin/oauth2_provider/accesstoken/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x042B58B0>, 'admin_url': '/admin/oauth2_provider/accesstoken/', 'object_name': 'AccessToken', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/oauth2_provider/application/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x042B5690>, 'admin_url': '/admin/oauth2_provider/application/', 'object_name': 'Application', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/oauth2_provider/grant/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04288F90>, 'admin_url': '/admin/oauth2_provider/grant/', 'object_name': 'Grant', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/oauth2_provider/refreshtoken/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x042B5EB0>, 'admin_url': '/admin/oauth2_provider/refreshtoken/', 'object_name': 'RefreshToken', 'perms': {'add': True, 'delete': True, 'change': True}}], 'app_label': 'oauth2_provider'}, {'name': 'Topico2', 'app_url': '/admin/topico2/', 'has_module_perms': True, 'models': [{'add_url': '/admin/topico2/consulta/add/', 'name': 'Consultas', 'admin_url': '/admin/topico2/consulta/', 'object_name': 'Consulta', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/topico2/diagnostico/add/', 'name': 'Diagnosticos', 'admin_url': '/admin/topico2/diagnostico/', 'object_name': 'Diagnostico', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/topico2/especificacionreceta/add/', 'name': 'EspecificacionRecetas', 'admin_url': '/admin/topico2/especificacionreceta/', 'object_name': 'EspecificacionReceta', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/topico2/medicamento/add/', 'name': 'Medicamentos', 'admin_url': '/admin/topico2/medicamento/', 'object_name': 'Medicamento', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/topico2/tratamiento/add/', 'name': 'Tratamientos', 'admin_url': '/admin/topico2/tratamiento/', 'object_name': 'Tratamiento', 'perms': {'add': True, 'delete': True, 'change': True}}], 'app_label': 'topico2'}], 'LANGUAGE_BIDI': False, 'site_header': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0351AC90>, 'has_permission': True, 'site_title': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0351AC30>, 'available_apps': [{'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03530730>, 'app_url': '/admin/auth/', 'has_module_perms': True, 'models': [{'add_url': '/admin/auth/group/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x042B5670>, 'admin_url': '/admin/auth/group/', 'object_name': 'Group', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/auth/permission/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x047261D0>, 'admin_url': '/admin/auth/permission/', 'object_name': 'Permission', 'perms': {'add': True, 'delete': True, 'change': True}}], 'app_label': 'auth'}, {'name': 'Auths', 'app_url': '/admin/auths/', 'has_module_perms': True, 'models': [{'add_url': '/admin/auths/hierarchytype/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x042B5C70>, 'admin_url': '/admin/auths/hierarchytype/', 'object_name': 'HierarchyType', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/auths/hierarchy/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x042B5DF0>, 'admin_url': '/admin/auths/hierarchy/', 'object_name': 'Hierarchy', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/auths/menu/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x042B5B10>, 'admin_url': '/admin/auths/menu/', 'object_name': 'Menu', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/auths/person/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x042B5AD0>, 'admin_url': '/admin/auths/person/', 'object_name': 'Person', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/auths/userhierarchygroup/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04726050>, 'admin_url': '/admin/auths/userhierarchygroup/', 'object_name': 'UserHierarchyGroup', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/auths/userhierarchypermission/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x042B5E90>, 'admin_url': '/admin/auths/userhierarchypermission/', 'object_name': 'UserHierarchyPermission', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/auths/user/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x042B5A50>, 'admin_url': '/admin/auths/user/', 'object_name': 'User', 'perms': {'add': True, 'delete': True, 'change': True}}], 'app_label': 'auths'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03530850>, 'app_url': '/admin/contenttypes/', 'has_module_perms': True, 'models': [{'add_url': '/admin/contenttypes/contenttype/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x042B5C10>, 'admin_url': '/admin/contenttypes/contenttype/', 'object_name': 'ContentType', 'perms': {'add': True, 'delete': True, 'change': True}}], 'app_label': 'contenttypes'}, {'name': 'Django OAuth Toolkit', 'app_url': '/admin/oauth2_provider/', 'has_module_perms': True, 'models': [{'add_url': '/admin/oauth2_provider/accesstoken/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x042B5CD0>, 'admin_url': '/admin/oauth2_provider/accesstoken/', 'object_name': 'AccessToken', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/oauth2_provider/application/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x042B56D0>, 'admin_url': '/admin/oauth2_provider/application/', 'object_name': 'Application', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/oauth2_provider/grant/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x042B5870>, 'admin_url': '/admin/oauth2_provider/grant/', 'object_name': 'Grant', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/oauth2_provider/refreshtoken/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x042B58D0>, 'admin_url': '/admin/oauth2_provider/refreshtoken/', 'object_name': 'RefreshToken', 'perms': {'add': True, 'delete': True, 'change': True}}], 'app_label': 'oauth2_provider'}, {'name': 'Topico2', 'app_url': '/admin/topico2/', 'has_module_perms': True, 'models': [{'add_url': '/admin/topico2/consulta/add/', 'name': 'Consultas', 'admin_url': '/admin/topico2/consulta/', 'object_name': 'Consulta', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/topico2/diagnostico/add/', 'name': 'Diagnosticos', 'admin_url': '/admin/topico2/diagnostico/', 'object_name': 'Diagnostico', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/topico2/especificacionreceta/add/', 'name': 'EspecificacionRecetas', 'admin_url': '/admin/topico2/especificacionreceta/', 'object_name': 'EspecificacionReceta', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/topico2/medicamento/add/', 'name': 'Medicamentos', 'admin_url': '/admin/topico2/medicamento/', 'object_name': 'Medicamento', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/topico2/tratamiento/add/', 'name': 'Tratamientos', 'admin_url': '/admin/topico2/tratamiento/', 'object_name': 'Tratamiento', 'perms': {'add': True, 'delete': True, 'change': True}}], 'app_label': 'topico2'}], 'title': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0351ACF0>, 'LANGUAGE_CODE': 'en-us', 'site_url': '/'}]"
+[2016-11-20 00:39:35] DEBUG [django.template:929] Exception while resolving variable 'is_popup' in template 'admin/index.html'.
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\context.py", line 75, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in "[{'False': False, 'None': None, 'True': True}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x04235A50>>, 'request': <WSGIRequest: GET '/admin/'>, 'user': <SimpleLazyObject: <User: admin>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x0478F970>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x042883B0>, 'DEFAULT_MESSAGE_LEVELS': {'WARNING': 30, 'DEBUG': 10, 'ERROR': 40, 'INFO': 20, 'SUCCESS': 25}}, {}, {'app_list': [{'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03530730>, 'app_url': '/admin/auth/', 'has_module_perms': True, 'models': [{'add_url': '/admin/auth/group/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x041EAE10>, 'admin_url': '/admin/auth/group/', 'object_name': 'Group', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/auth/permission/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x042B5FD0>, 'admin_url': '/admin/auth/permission/', 'object_name': 'Permission', 'perms': {'add': True, 'delete': True, 'change': True}}], 'app_label': 'auth'}, {'name': 'Auths', 'app_url': '/admin/auths/', 'has_module_perms': True, 'models': [{'add_url': '/admin/auths/hierarchytype/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x042B5C90>, 'admin_url': '/admin/auths/hierarchytype/', 'object_name': 'HierarchyType', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/auths/hierarchy/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x042B5B50>, 'admin_url': '/admin/auths/hierarchy/', 'object_name': 'Hierarchy', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/auths/menu/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x042B5710>, 'admin_url': '/admin/auths/menu/', 'object_name': 'Menu', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/auths/person/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x042B5750>, 'admin_url': '/admin/auths/person/', 'object_name': 'Person', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/auths/userhierarchygroup/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x042B5890>, 'admin_url': '/admin/auths/userhierarchygroup/', 'object_name': 'UserHierarchyGroup', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/auths/userhierarchypermission/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x042B5ED0>, 'admin_url': '/admin/auths/userhierarchypermission/', 'object_name': 'UserHierarchyPermission', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/auths/user/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x041EAF10>, 'admin_url': '/admin/auths/user/', 'object_name': 'User', 'perms': {'add': True, 'delete': True, 'change': True}}], 'app_label': 'auths'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03530850>, 'app_url': '/admin/contenttypes/', 'has_module_perms': True, 'models': [{'add_url': '/admin/contenttypes/contenttype/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x041EAFF0>, 'admin_url': '/admin/contenttypes/contenttype/', 'object_name': 'ContentType', 'perms': {'add': True, 'delete': True, 'change': True}}], 'app_label': 'contenttypes'}, {'name': 'Django OAuth Toolkit', 'app_url': '/admin/oauth2_provider/', 'has_module_perms': True, 'models': [{'add_url': '/admin/oauth2_provider/accesstoken/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x042B58B0>, 'admin_url': '/admin/oauth2_provider/accesstoken/', 'object_name': 'AccessToken', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/oauth2_provider/application/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x042B5690>, 'admin_url': '/admin/oauth2_provider/application/', 'object_name': 'Application', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/oauth2_provider/grant/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04288F90>, 'admin_url': '/admin/oauth2_provider/grant/', 'object_name': 'Grant', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/oauth2_provider/refreshtoken/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x042B5EB0>, 'admin_url': '/admin/oauth2_provider/refreshtoken/', 'object_name': 'RefreshToken', 'perms': {'add': True, 'delete': True, 'change': True}}], 'app_label': 'oauth2_provider'}, {'name': 'Topico2', 'app_url': '/admin/topico2/', 'has_module_perms': True, 'models': [{'add_url': '/admin/topico2/consulta/add/', 'name': 'Consultas', 'admin_url': '/admin/topico2/consulta/', 'object_name': 'Consulta', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/topico2/diagnostico/add/', 'name': 'Diagnosticos', 'admin_url': '/admin/topico2/diagnostico/', 'object_name': 'Diagnostico', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/topico2/especificacionreceta/add/', 'name': 'EspecificacionRecetas', 'admin_url': '/admin/topico2/especificacionreceta/', 'object_name': 'EspecificacionReceta', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/topico2/medicamento/add/', 'name': 'Medicamentos', 'admin_url': '/admin/topico2/medicamento/', 'object_name': 'Medicamento', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/topico2/tratamiento/add/', 'name': 'Tratamientos', 'admin_url': '/admin/topico2/tratamiento/', 'object_name': 'Tratamiento', 'perms': {'add': True, 'delete': True, 'change': True}}], 'app_label': 'topico2'}], 'LANGUAGE_BIDI': False, 'site_header': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0351AC90>, 'has_permission': True, 'site_title': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0351AC30>, 'available_apps': [{'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03530730>, 'app_url': '/admin/auth/', 'has_module_perms': True, 'models': [{'add_url': '/admin/auth/group/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x042B5670>, 'admin_url': '/admin/auth/group/', 'object_name': 'Group', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/auth/permission/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x047261D0>, 'admin_url': '/admin/auth/permission/', 'object_name': 'Permission', 'perms': {'add': True, 'delete': True, 'change': True}}], 'app_label': 'auth'}, {'name': 'Auths', 'app_url': '/admin/auths/', 'has_module_perms': True, 'models': [{'add_url': '/admin/auths/hierarchytype/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x042B5C70>, 'admin_url': '/admin/auths/hierarchytype/', 'object_name': 'HierarchyType', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/auths/hierarchy/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x042B5DF0>, 'admin_url': '/admin/auths/hierarchy/', 'object_name': 'Hierarchy', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/auths/menu/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x042B5B10>, 'admin_url': '/admin/auths/menu/', 'object_name': 'Menu', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/auths/person/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x042B5AD0>, 'admin_url': '/admin/auths/person/', 'object_name': 'Person', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/auths/userhierarchygroup/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04726050>, 'admin_url': '/admin/auths/userhierarchygroup/', 'object_name': 'UserHierarchyGroup', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/auths/userhierarchypermission/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x042B5E90>, 'admin_url': '/admin/auths/userhierarchypermission/', 'object_name': 'UserHierarchyPermission', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/auths/user/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x042B5A50>, 'admin_url': '/admin/auths/user/', 'object_name': 'User', 'perms': {'add': True, 'delete': True, 'change': True}}], 'app_label': 'auths'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03530850>, 'app_url': '/admin/contenttypes/', 'has_module_perms': True, 'models': [{'add_url': '/admin/contenttypes/contenttype/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x042B5C10>, 'admin_url': '/admin/contenttypes/contenttype/', 'object_name': 'ContentType', 'perms': {'add': True, 'delete': True, 'change': True}}], 'app_label': 'contenttypes'}, {'name': 'Django OAuth Toolkit', 'app_url': '/admin/oauth2_provider/', 'has_module_perms': True, 'models': [{'add_url': '/admin/oauth2_provider/accesstoken/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x042B5CD0>, 'admin_url': '/admin/oauth2_provider/accesstoken/', 'object_name': 'AccessToken', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/oauth2_provider/application/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x042B56D0>, 'admin_url': '/admin/oauth2_provider/application/', 'object_name': 'Application', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/oauth2_provider/grant/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x042B5870>, 'admin_url': '/admin/oauth2_provider/grant/', 'object_name': 'Grant', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/oauth2_provider/refreshtoken/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x042B58D0>, 'admin_url': '/admin/oauth2_provider/refreshtoken/', 'object_name': 'RefreshToken', 'perms': {'add': True, 'delete': True, 'change': True}}], 'app_label': 'oauth2_provider'}, {'name': 'Topico2', 'app_url': '/admin/topico2/', 'has_module_perms': True, 'models': [{'add_url': '/admin/topico2/consulta/add/', 'name': 'Consultas', 'admin_url': '/admin/topico2/consulta/', 'object_name': 'Consulta', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/topico2/diagnostico/add/', 'name': 'Diagnosticos', 'admin_url': '/admin/topico2/diagnostico/', 'object_name': 'Diagnostico', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/topico2/especificacionreceta/add/', 'name': 'EspecificacionRecetas', 'admin_url': '/admin/topico2/especificacionreceta/', 'object_name': 'EspecificacionReceta', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/topico2/medicamento/add/', 'name': 'Medicamentos', 'admin_url': '/admin/topico2/medicamento/', 'object_name': 'Medicamento', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/topico2/tratamiento/add/', 'name': 'Tratamientos', 'admin_url': '/admin/topico2/tratamiento/', 'object_name': 'Tratamiento', 'perms': {'add': True, 'delete': True, 'change': True}}], 'app_label': 'topico2'}], 'title': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0351ACF0>, 'LANGUAGE_CODE': 'en-us', 'site_url': '/'}]"
+[2016-11-20 00:39:35] DEBUG [django.db.backends:90] (0.001) SELECT "django_admin_log"."id", "django_admin_log"."action_time", "django_admin_log"."user_id", "django_admin_log"."content_type_id", "django_admin_log"."object_id", "django_admin_log"."object_repr", "django_admin_log"."action_flag", "django_admin_log"."change_message", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_admin_log" INNER JOIN "auths_user" ON ("django_admin_log"."user_id" = "auths_user"."id") LEFT OUTER JOIN "django_content_type" ON ("django_admin_log"."content_type_id" = "django_content_type"."id") WHERE "django_admin_log"."user_id" = '01e659bc77a5436f9fc859d23a77e6aa' ORDER BY "django_admin_log"."action_time" DESC LIMIT 10; args=('01e659bc77a5436f9fc859d23a77e6aa',)
+[2016-11-20 00:39:36] INFO [django.server:131] "GET /admin/ HTTP/1.1" 200 14314
+[2016-11-20 00:39:36] INFO [django.server:131] "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[2016-11-20 00:39:36] INFO [django.server:131] "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+[2016-11-20 00:39:36] INFO [django.server:131] "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+[2016-11-20 00:39:36] INFO [django.server:131] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+[2016-11-20 00:39:36] INFO [django.server:131] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+[2016-11-20 00:39:36] INFO [django.server:131] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+[2016-11-20 00:39:36] INFO [django.server:131] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+[2016-11-20 00:39:36] INFO [django.server:131] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+[2016-11-20 00:39:36] DEBUG [django.template:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'path': 'favicon.ico', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'D:\\yuri\\medicfastv2\\ve_medicfast\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'D:\\yuri\\medicfastv2\\ve_medicfast\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'D:\\yuri\\medicfastv2\\ve_medicfast\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'medicfastv2_service_apps.auths_api.urls' from 'D:\\yuri\\medicfastv2\\medicfastv2_service\\medicfastv2_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[2016-11-20 00:39:36] DEBUG [django.template:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'path': 'favicon.ico', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'D:\\yuri\\medicfastv2\\ve_medicfast\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'D:\\yuri\\medicfastv2\\ve_medicfast\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'D:\\yuri\\medicfastv2\\ve_medicfast\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'medicfastv2_service_apps.auths_api.urls' from 'D:\\yuri\\medicfastv2\\medicfastv2_service\\medicfastv2_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'D:\\\\yuri\\\\medicfastv2\\\\ve_medicfast\\\\lib\\\\site-packages\\\\django\\\\contrib\\\\admindocs\\\\urls.py'> (None:None) ^admin/doc/>"
+[2016-11-20 00:39:36] DEBUG [django.template:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'path': 'favicon.ico', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'D:\\yuri\\medicfastv2\\ve_medicfast\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'D:\\yuri\\medicfastv2\\ve_medicfast\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'D:\\yuri\\medicfastv2\\ve_medicfast\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'medicfastv2_service_apps.auths_api.urls' from 'D:\\yuri\\medicfastv2\\medicfastv2_service\\medicfastv2_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'rest_framework.urls' from 'D:\\\\yuri\\\\medicfastv2\\\\ve_medicfast\\\\lib\\\\site-packages\\\\rest_framework\\\\urls.py'> (rest_framework:rest_framework) ^api-auth/>"
+[2016-11-20 00:39:36] DEBUG [django.template:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'path': 'favicon.ico', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'D:\\yuri\\medicfastv2\\ve_medicfast\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'D:\\yuri\\medicfastv2\\ve_medicfast\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'D:\\yuri\\medicfastv2\\ve_medicfast\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'medicfastv2_service_apps.auths_api.urls' from 'D:\\yuri\\medicfastv2\\medicfastv2_service\\medicfastv2_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'oauth2_provider.urls' from 'D:\\\\yuri\\\\medicfastv2\\\\ve_medicfast\\\\lib\\\\site-packages\\\\oauth2_provider\\\\urls.py'> (None:oauth2_provider) ^o/>"
+[2016-11-20 00:39:36] DEBUG [django.template:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'path': 'favicon.ico', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'D:\\yuri\\medicfastv2\\ve_medicfast\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'D:\\yuri\\medicfastv2\\ve_medicfast\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'D:\\yuri\\medicfastv2\\ve_medicfast\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'medicfastv2_service_apps.auths_api.urls' from 'D:\\yuri\\medicfastv2\\medicfastv2_service\\medicfastv2_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'medicfastv2_service_apps.auths_api.urls' from 'D:\\\\yuri\\\\medicfastv2\\\\medicfastv2_service\\\\medicfastv2_service_apps\\\\auths_api\\\\urls.py'> (None:None) ^api/auths/>"
+[2016-11-20 00:39:36] WARNING [django.request:152] Not Found: /favicon.ico
+[2016-11-20 00:39:36] WARNING [django.server:131] "GET /favicon.ico HTTP/1.1" 404 2381
+[2016-11-20 00:39:47] INFO [django.server:131] "GET /api-auth/login HTTP/1.1" 301 0
+[2016-11-20 00:39:47] DEBUG [django.template:929] Exception while resolving variable 'name' in template 'rest_framework/login.html'.
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\context.py", line 75, in __getitem__
+    raise KeyError(key)
+KeyError: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '[{\'False\': False, \'None\': None, \'True\': True}, {\'csrf_token\': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x04A1F348>>, \'request\': <WSGIRequest: GET \'/api-auth/login/\'>, \'user\': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x04773390>>, \'perms\': <django.contrib.auth.context_processors.PermWrapper object at 0x0478E150>, \'messages\': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x047A7930>, \'DEFAULT_MESSAGE_LEVELS\': {\'WARNING\': 30, \'DEBUG\': 10, \'ERROR\': 40, \'INFO\': 20, \'SUCCESS\': 25}}, {}, {\'next\': \'\', \'form\': <AuthenticationForm bound=False, valid=Unknown, fields=(username;password)>, \'site_name\': \'localhost:8000\', \'site\': <django.contrib.sites.requests.RequestSite object at 0x047A7510>}, {\'block\': <Block Node: head. Contents: [<TextNode: \'\\n\\n      \'>, <Block Node: meta. Contents: [<TextNode: \'\\n        <meta http-equiv\'>]>, <TextNode: \'\\n\\n      <title>\'>, <Block Node: title. Contents: [<IfNode>, <TextNode: \'Django REST framework\'>]>, <TextNode: \'</title>\\n\\n      \'>, <Block Node: style. Contents: [<TextNode: \'\\n        \'>, <Block Node: bootstrap_theme. Contents: [<TextNode: \'\\n          <link rel="sty\'>, <django.templatetags.static.StaticNode object at 0x0478FDB0>, <TextNode: \'"/>\\n          <link rel="\'>, <django.templatetags.static.StaticNode object at 0x0478FDD0>, <TextNode: \'"/>\\n        \'>]>, <TextNode: \'\\n\\n        <link rel="styl\'>, <django.templatetags.static.StaticNode object at 0x0478FF50>, <TextNode: \'"/>\\n        <link rel="st\'>, <django.templatetags.static.StaticNode object at 0x0478FF70>, <TextNode: \'"/>\\n      \'>]>, <TextNode: \'\\n\\n    \'>]>}, {\'block\': <Block Node: title. Contents: [<IfNode>, <TextNode: \'Django REST framework\'>]>}]'
+[2016-11-20 00:39:47] INFO [django.server:131] "GET /api-auth/login/ HTTP/1.1" 200 2693
+[2016-11-20 00:39:47] INFO [django.server:131] "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1132
+[2016-11-20 00:39:47] INFO [django.server:131] "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+[2016-11-20 00:39:47] INFO [django.server:131] "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+[2016-11-20 00:39:47] INFO [django.server:131] "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121200
+[2016-11-20 00:39:47] INFO [django.server:131] "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+[2016-11-20 00:40:00] DEBUG [django.db.backends:90] (0.003) SELECT "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by" FROM "auths_user" WHERE "auths_user"."username" = 'admin'; args=('admin',)
+[2016-11-20 00:40:00] DEBUG [django.db.backends:90] (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2016-11-20 05:40:00.068052' AND "django_session"."session_key" = 'tte7gjfz4bmwgr3tggzw5o6r3ou1cyfi'); args=('2016-11-20 05:40:00.068052', 'tte7gjfz4bmwgr3tggzw5o6r3ou1cyfi')
+[2016-11-20 00:40:00] DEBUG [django.db.backends:90] (0.000) BEGIN; args=None
+[2016-11-20 00:40:00] DEBUG [django.db.backends:90] (0.001) UPDATE "auths_user" SET "last_login" = '2016-11-20 05:40:00.069053' WHERE "auths_user"."id" = '01e659bc77a5436f9fc859d23a77e6aa'; args=('2016-11-20 05:40:00.069053', '01e659bc77a5436f9fc859d23a77e6aa')
+[2016-11-20 00:40:00] DEBUG [django.db.backends:90] (0.000) BEGIN; args=None
+[2016-11-20 00:40:00] DEBUG [django.db.backends:90] (0.001) UPDATE "django_session" SET "session_data" = 'NWFkZGFjNzc3M2E1ZDU0NDM3OTkzZjRiNGJlMGVhNGU5OTUxNWRjMjp7Il9hdXRoX3VzZXJfaGFzaCI6IjBhMGI1OWI1MzUxYzJlNWYzZTc0NWViMGM5YzQ0NDc4NTM2OWUxOTQiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIwMWU2NTliYy03N2E1LTQzNmYtOWZjOC01OWQyM2E3N2U2YWEifQ==', "expire_date" = '2016-12-04 05:40:00.158336' WHERE "django_session"."session_key" = 'tte7gjfz4bmwgr3tggzw5o6r3ou1cyfi'; args=('NWFkZGFjNzc3M2E1ZDU0NDM3OTkzZjRiNGJlMGVhNGU5OTUxNWRjMjp7Il9hdXRoX3VzZXJfaGFzaCI6IjBhMGI1OWI1MzUxYzJlNWYzZTc0NWViMGM5YzQ0NDc4NTM2OWUxOTQiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIwMWU2NTliYy03N2E1LTQzNmYtOWZjOC01OWQyM2E3N2U2YWEifQ==', '2016-12-04 05:40:00.158336', 'tte7gjfz4bmwgr3tggzw5o6r3ou1cyfi')
+[2016-11-20 00:40:00] INFO [django.server:131] "POST /api-auth/login/ HTTP/1.1" 302 0
+[2016-11-20 00:40:00] DEBUG [django.template:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'path': 'accounts/profile/', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'D:\\yuri\\medicfastv2\\ve_medicfast\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'D:\\yuri\\medicfastv2\\ve_medicfast\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'D:\\yuri\\medicfastv2\\ve_medicfast\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'medicfastv2_service_apps.auths_api.urls' from 'D:\\yuri\\medicfastv2\\medicfastv2_service\\medicfastv2_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[2016-11-20 00:40:00] DEBUG [django.template:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'path': 'accounts/profile/', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'D:\\yuri\\medicfastv2\\ve_medicfast\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'D:\\yuri\\medicfastv2\\ve_medicfast\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'D:\\yuri\\medicfastv2\\ve_medicfast\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'medicfastv2_service_apps.auths_api.urls' from 'D:\\yuri\\medicfastv2\\medicfastv2_service\\medicfastv2_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'D:\\\\yuri\\\\medicfastv2\\\\ve_medicfast\\\\lib\\\\site-packages\\\\django\\\\contrib\\\\admindocs\\\\urls.py'> (None:None) ^admin/doc/>"
+[2016-11-20 00:40:00] DEBUG [django.template:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'path': 'accounts/profile/', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'D:\\yuri\\medicfastv2\\ve_medicfast\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'D:\\yuri\\medicfastv2\\ve_medicfast\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'D:\\yuri\\medicfastv2\\ve_medicfast\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'medicfastv2_service_apps.auths_api.urls' from 'D:\\yuri\\medicfastv2\\medicfastv2_service\\medicfastv2_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'rest_framework.urls' from 'D:\\\\yuri\\\\medicfastv2\\\\ve_medicfast\\\\lib\\\\site-packages\\\\rest_framework\\\\urls.py'> (rest_framework:rest_framework) ^api-auth/>"
+[2016-11-20 00:40:00] DEBUG [django.template:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'path': 'accounts/profile/', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'D:\\yuri\\medicfastv2\\ve_medicfast\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'D:\\yuri\\medicfastv2\\ve_medicfast\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'D:\\yuri\\medicfastv2\\ve_medicfast\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'medicfastv2_service_apps.auths_api.urls' from 'D:\\yuri\\medicfastv2\\medicfastv2_service\\medicfastv2_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'oauth2_provider.urls' from 'D:\\\\yuri\\\\medicfastv2\\\\ve_medicfast\\\\lib\\\\site-packages\\\\oauth2_provider\\\\urls.py'> (None:oauth2_provider) ^o/>"
+[2016-11-20 00:40:00] DEBUG [django.template:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'path': 'accounts/profile/', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'D:\\yuri\\medicfastv2\\ve_medicfast\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'D:\\yuri\\medicfastv2\\ve_medicfast\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'D:\\yuri\\medicfastv2\\ve_medicfast\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'medicfastv2_service_apps.auths_api.urls' from 'D:\\yuri\\medicfastv2\\medicfastv2_service\\medicfastv2_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'medicfastv2_service_apps.auths_api.urls' from 'D:\\\\yuri\\\\medicfastv2\\\\medicfastv2_service\\\\medicfastv2_service_apps\\\\auths_api\\\\urls.py'> (None:None) ^api/auths/>"
+[2016-11-20 00:40:00] WARNING [django.request:152] Not Found: /accounts/profile/
+[2016-11-20 00:40:00] WARNING [django.server:131] "GET /accounts/profile/ HTTP/1.1" 404 2399
+[2016-11-20 00:40:41] DEBUG [django.db.backends:90] (0.002) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2016-11-20 05:40:41.130161' AND "django_session"."session_key" = 'tte7gjfz4bmwgr3tggzw5o6r3ou1cyfi'); args=('2016-11-20 05:40:41.130161', 'tte7gjfz4bmwgr3tggzw5o6r3ou1cyfi')
+[2016-11-20 00:40:41] DEBUG [django.db.backends:90] (0.000) SELECT "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by" FROM "auths_user" WHERE "auths_user"."id" = '01e659bc77a5436f9fc859d23a77e6aa'; args=('01e659bc77a5436f9fc859d23a77e6aa',)
+[2016-11-20 00:40:41] DEBUG [django.template:929] Exception while resolving variable 'is_popup' in template 'admin/index.html'.
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\context.py", line 75, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in "[{'False': False, 'None': None, 'True': True}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x04A1F930>>, 'request': <WSGIRequest: GET '/admin/'>, 'user': <SimpleLazyObject: <User: admin>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x047876D0>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x047A2470>, 'DEFAULT_MESSAGE_LEVELS': {'WARNING': 30, 'DEBUG': 10, 'ERROR': 40, 'INFO': 20, 'SUCCESS': 25}}, {}, {'app_list': [{'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03530730>, 'app_url': '/admin/auth/', 'has_module_perms': True, 'models': [{'add_url': '/admin/auth/group/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x047A2E90>, 'admin_url': '/admin/auth/group/', 'object_name': 'Group', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/auth/permission/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x047A2130>, 'admin_url': '/admin/auth/permission/', 'object_name': 'Permission', 'perms': {'add': True, 'delete': True, 'change': True}}], 'app_label': 'auth'}, {'name': 'Auths', 'app_url': '/admin/auths/', 'has_module_perms': True, 'models': [{'add_url': '/admin/auths/hierarchytype/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x047A2E30>, 'admin_url': '/admin/auths/hierarchytype/', 'object_name': 'HierarchyType', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/auths/hierarchy/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x047A2BD0>, 'admin_url': '/admin/auths/hierarchy/', 'object_name': 'Hierarchy', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/auths/menu/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x047A2A50>, 'admin_url': '/admin/auths/menu/', 'object_name': 'Menu', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/auths/person/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x047A2650>, 'admin_url': '/admin/auths/person/', 'object_name': 'Person', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/auths/userhierarchygroup/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x047A26D0>, 'admin_url': '/admin/auths/userhierarchygroup/', 'object_name': 'UserHierarchyGroup', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/auths/userhierarchypermission/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x047A2550>, 'admin_url': '/admin/auths/userhierarchypermission/', 'object_name': 'UserHierarchyPermission', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/auths/user/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x047A2FD0>, 'admin_url': '/admin/auths/user/', 'object_name': 'User', 'perms': {'add': True, 'delete': True, 'change': True}}], 'app_label': 'auths'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03530850>, 'app_url': '/admin/contenttypes/', 'has_module_perms': True, 'models': [{'add_url': '/admin/contenttypes/contenttype/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x047A2BB0>, 'admin_url': '/admin/contenttypes/contenttype/', 'object_name': 'ContentType', 'perms': {'add': True, 'delete': True, 'change': True}}], 'app_label': 'contenttypes'}, {'name': 'Django OAuth Toolkit', 'app_url': '/admin/oauth2_provider/', 'has_module_perms': True, 'models': [{'add_url': '/admin/oauth2_provider/accesstoken/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x047A25D0>, 'admin_url': '/admin/oauth2_provider/accesstoken/', 'object_name': 'AccessToken', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/oauth2_provider/application/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x047A2F50>, 'admin_url': '/admin/oauth2_provider/application/', 'object_name': 'Application', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/oauth2_provider/grant/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x047A2710>, 'admin_url': '/admin/oauth2_provider/grant/', 'object_name': 'Grant', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/oauth2_provider/refreshtoken/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x047A2B50>, 'admin_url': '/admin/oauth2_provider/refreshtoken/', 'object_name': 'RefreshToken', 'perms': {'add': True, 'delete': True, 'change': True}}], 'app_label': 'oauth2_provider'}, {'name': 'Topico2', 'app_url': '/admin/topico2/', 'has_module_perms': True, 'models': [{'add_url': '/admin/topico2/consulta/add/', 'name': 'Consultas', 'admin_url': '/admin/topico2/consulta/', 'object_name': 'Consulta', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/topico2/diagnostico/add/', 'name': 'Diagnosticos', 'admin_url': '/admin/topico2/diagnostico/', 'object_name': 'Diagnostico', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/topico2/especificacionreceta/add/', 'name': 'EspecificacionRecetas', 'admin_url': '/admin/topico2/especificacionreceta/', 'object_name': 'EspecificacionReceta', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/topico2/medicamento/add/', 'name': 'Medicamentos', 'admin_url': '/admin/topico2/medicamento/', 'object_name': 'Medicamento', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/topico2/tratamiento/add/', 'name': 'Tratamientos', 'admin_url': '/admin/topico2/tratamiento/', 'object_name': 'Tratamiento', 'perms': {'add': True, 'delete': True, 'change': True}}], 'app_label': 'topico2'}], 'LANGUAGE_BIDI': False, 'site_header': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0351AC90>, 'has_permission': True, 'site_title': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0351AC30>, 'available_apps': [{'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03530730>, 'app_url': '/admin/auth/', 'has_module_perms': True, 'models': [{'add_url': '/admin/auth/group/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x047A2D30>, 'admin_url': '/admin/auth/group/', 'object_name': 'Group', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/auth/permission/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x047A2670>, 'admin_url': '/admin/auth/permission/', 'object_name': 'Permission', 'perms': {'add': True, 'delete': True, 'change': True}}], 'app_label': 'auth'}, {'name': 'Auths', 'app_url': '/admin/auths/', 'has_module_perms': True, 'models': [{'add_url': '/admin/auths/hierarchytype/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x047A20F0>, 'admin_url': '/admin/auths/hierarchytype/', 'object_name': 'HierarchyType', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/auths/hierarchy/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x047A2A30>, 'admin_url': '/admin/auths/hierarchy/', 'object_name': 'Hierarchy', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/auths/menu/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x047A2610>, 'admin_url': '/admin/auths/menu/', 'object_name': 'Menu', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/auths/person/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x047A25B0>, 'admin_url': '/admin/auths/person/', 'object_name': 'Person', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/auths/userhierarchygroup/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x047A2270>, 'admin_url': '/admin/auths/userhierarchygroup/', 'object_name': 'UserHierarchyGroup', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/auths/userhierarchypermission/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x047A26B0>, 'admin_url': '/admin/auths/userhierarchypermission/', 'object_name': 'UserHierarchyPermission', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/auths/user/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x047A22D0>, 'admin_url': '/admin/auths/user/', 'object_name': 'User', 'perms': {'add': True, 'delete': True, 'change': True}}], 'app_label': 'auths'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03530850>, 'app_url': '/admin/contenttypes/', 'has_module_perms': True, 'models': [{'add_url': '/admin/contenttypes/contenttype/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x047A26F0>, 'admin_url': '/admin/contenttypes/contenttype/', 'object_name': 'ContentType', 'perms': {'add': True, 'delete': True, 'change': True}}], 'app_label': 'contenttypes'}, {'name': 'Django OAuth Toolkit', 'app_url': '/admin/oauth2_provider/', 'has_module_perms': True, 'models': [{'add_url': '/admin/oauth2_provider/accesstoken/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x047A2250>, 'admin_url': '/admin/oauth2_provider/accesstoken/', 'object_name': 'AccessToken', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/oauth2_provider/application/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x047A2FF0>, 'admin_url': '/admin/oauth2_provider/application/', 'object_name': 'Application', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/oauth2_provider/grant/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x047A20D0>, 'admin_url': '/admin/oauth2_provider/grant/', 'object_name': 'Grant', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/oauth2_provider/refreshtoken/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x047A2E70>, 'admin_url': '/admin/oauth2_provider/refreshtoken/', 'object_name': 'RefreshToken', 'perms': {'add': True, 'delete': True, 'change': True}}], 'app_label': 'oauth2_provider'}, {'name': 'Topico2', 'app_url': '/admin/topico2/', 'has_module_perms': True, 'models': [{'add_url': '/admin/topico2/consulta/add/', 'name': 'Consultas', 'admin_url': '/admin/topico2/consulta/', 'object_name': 'Consulta', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/topico2/diagnostico/add/', 'name': 'Diagnosticos', 'admin_url': '/admin/topico2/diagnostico/', 'object_name': 'Diagnostico', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/topico2/especificacionreceta/add/', 'name': 'EspecificacionRecetas', 'admin_url': '/admin/topico2/especificacionreceta/', 'object_name': 'EspecificacionReceta', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/topico2/medicamento/add/', 'name': 'Medicamentos', 'admin_url': '/admin/topico2/medicamento/', 'object_name': 'Medicamento', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/topico2/tratamiento/add/', 'name': 'Tratamientos', 'admin_url': '/admin/topico2/tratamiento/', 'object_name': 'Tratamiento', 'perms': {'add': True, 'delete': True, 'change': True}}], 'app_label': 'topico2'}], 'title': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0351ACF0>, 'LANGUAGE_CODE': 'en-us', 'site_url': '/'}]"
+[2016-11-20 00:40:41] DEBUG [django.template:929] Exception while resolving variable 'is_popup' in template 'admin/index.html'.
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\context.py", line 75, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in "[{'False': False, 'None': None, 'True': True}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x04A1F930>>, 'request': <WSGIRequest: GET '/admin/'>, 'user': <SimpleLazyObject: <User: admin>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x047876D0>, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x047A2470>, 'DEFAULT_MESSAGE_LEVELS': {'WARNING': 30, 'DEBUG': 10, 'ERROR': 40, 'INFO': 20, 'SUCCESS': 25}}, {}, {'app_list': [{'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03530730>, 'app_url': '/admin/auth/', 'has_module_perms': True, 'models': [{'add_url': '/admin/auth/group/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x047A2E90>, 'admin_url': '/admin/auth/group/', 'object_name': 'Group', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/auth/permission/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x047A2130>, 'admin_url': '/admin/auth/permission/', 'object_name': 'Permission', 'perms': {'add': True, 'delete': True, 'change': True}}], 'app_label': 'auth'}, {'name': 'Auths', 'app_url': '/admin/auths/', 'has_module_perms': True, 'models': [{'add_url': '/admin/auths/hierarchytype/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x047A2E30>, 'admin_url': '/admin/auths/hierarchytype/', 'object_name': 'HierarchyType', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/auths/hierarchy/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x047A2BD0>, 'admin_url': '/admin/auths/hierarchy/', 'object_name': 'Hierarchy', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/auths/menu/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x047A2A50>, 'admin_url': '/admin/auths/menu/', 'object_name': 'Menu', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/auths/person/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x047A2650>, 'admin_url': '/admin/auths/person/', 'object_name': 'Person', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/auths/userhierarchygroup/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x047A26D0>, 'admin_url': '/admin/auths/userhierarchygroup/', 'object_name': 'UserHierarchyGroup', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/auths/userhierarchypermission/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x047A2550>, 'admin_url': '/admin/auths/userhierarchypermission/', 'object_name': 'UserHierarchyPermission', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/auths/user/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x047A2FD0>, 'admin_url': '/admin/auths/user/', 'object_name': 'User', 'perms': {'add': True, 'delete': True, 'change': True}}], 'app_label': 'auths'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03530850>, 'app_url': '/admin/contenttypes/', 'has_module_perms': True, 'models': [{'add_url': '/admin/contenttypes/contenttype/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x047A2BB0>, 'admin_url': '/admin/contenttypes/contenttype/', 'object_name': 'ContentType', 'perms': {'add': True, 'delete': True, 'change': True}}], 'app_label': 'contenttypes'}, {'name': 'Django OAuth Toolkit', 'app_url': '/admin/oauth2_provider/', 'has_module_perms': True, 'models': [{'add_url': '/admin/oauth2_provider/accesstoken/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x047A25D0>, 'admin_url': '/admin/oauth2_provider/accesstoken/', 'object_name': 'AccessToken', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/oauth2_provider/application/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x047A2F50>, 'admin_url': '/admin/oauth2_provider/application/', 'object_name': 'Application', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/oauth2_provider/grant/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x047A2710>, 'admin_url': '/admin/oauth2_provider/grant/', 'object_name': 'Grant', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/oauth2_provider/refreshtoken/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x047A2B50>, 'admin_url': '/admin/oauth2_provider/refreshtoken/', 'object_name': 'RefreshToken', 'perms': {'add': True, 'delete': True, 'change': True}}], 'app_label': 'oauth2_provider'}, {'name': 'Topico2', 'app_url': '/admin/topico2/', 'has_module_perms': True, 'models': [{'add_url': '/admin/topico2/consulta/add/', 'name': 'Consultas', 'admin_url': '/admin/topico2/consulta/', 'object_name': 'Consulta', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/topico2/diagnostico/add/', 'name': 'Diagnosticos', 'admin_url': '/admin/topico2/diagnostico/', 'object_name': 'Diagnostico', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/topico2/especificacionreceta/add/', 'name': 'EspecificacionRecetas', 'admin_url': '/admin/topico2/especificacionreceta/', 'object_name': 'EspecificacionReceta', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/topico2/medicamento/add/', 'name': 'Medicamentos', 'admin_url': '/admin/topico2/medicamento/', 'object_name': 'Medicamento', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/topico2/tratamiento/add/', 'name': 'Tratamientos', 'admin_url': '/admin/topico2/tratamiento/', 'object_name': 'Tratamiento', 'perms': {'add': True, 'delete': True, 'change': True}}], 'app_label': 'topico2'}], 'LANGUAGE_BIDI': False, 'site_header': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0351AC90>, 'has_permission': True, 'site_title': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0351AC30>, 'available_apps': [{'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03530730>, 'app_url': '/admin/auth/', 'has_module_perms': True, 'models': [{'add_url': '/admin/auth/group/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x047A2D30>, 'admin_url': '/admin/auth/group/', 'object_name': 'Group', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/auth/permission/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x047A2670>, 'admin_url': '/admin/auth/permission/', 'object_name': 'Permission', 'perms': {'add': True, 'delete': True, 'change': True}}], 'app_label': 'auth'}, {'name': 'Auths', 'app_url': '/admin/auths/', 'has_module_perms': True, 'models': [{'add_url': '/admin/auths/hierarchytype/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x047A20F0>, 'admin_url': '/admin/auths/hierarchytype/', 'object_name': 'HierarchyType', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/auths/hierarchy/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x047A2A30>, 'admin_url': '/admin/auths/hierarchy/', 'object_name': 'Hierarchy', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/auths/menu/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x047A2610>, 'admin_url': '/admin/auths/menu/', 'object_name': 'Menu', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/auths/person/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x047A25B0>, 'admin_url': '/admin/auths/person/', 'object_name': 'Person', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/auths/userhierarchygroup/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x047A2270>, 'admin_url': '/admin/auths/userhierarchygroup/', 'object_name': 'UserHierarchyGroup', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/auths/userhierarchypermission/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x047A26B0>, 'admin_url': '/admin/auths/userhierarchypermission/', 'object_name': 'UserHierarchyPermission', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/auths/user/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x047A22D0>, 'admin_url': '/admin/auths/user/', 'object_name': 'User', 'perms': {'add': True, 'delete': True, 'change': True}}], 'app_label': 'auths'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03530850>, 'app_url': '/admin/contenttypes/', 'has_module_perms': True, 'models': [{'add_url': '/admin/contenttypes/contenttype/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x047A26F0>, 'admin_url': '/admin/contenttypes/contenttype/', 'object_name': 'ContentType', 'perms': {'add': True, 'delete': True, 'change': True}}], 'app_label': 'contenttypes'}, {'name': 'Django OAuth Toolkit', 'app_url': '/admin/oauth2_provider/', 'has_module_perms': True, 'models': [{'add_url': '/admin/oauth2_provider/accesstoken/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x047A2250>, 'admin_url': '/admin/oauth2_provider/accesstoken/', 'object_name': 'AccessToken', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/oauth2_provider/application/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x047A2FF0>, 'admin_url': '/admin/oauth2_provider/application/', 'object_name': 'Application', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/oauth2_provider/grant/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x047A20D0>, 'admin_url': '/admin/oauth2_provider/grant/', 'object_name': 'Grant', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/oauth2_provider/refreshtoken/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x047A2E70>, 'admin_url': '/admin/oauth2_provider/refreshtoken/', 'object_name': 'RefreshToken', 'perms': {'add': True, 'delete': True, 'change': True}}], 'app_label': 'oauth2_provider'}, {'name': 'Topico2', 'app_url': '/admin/topico2/', 'has_module_perms': True, 'models': [{'add_url': '/admin/topico2/consulta/add/', 'name': 'Consultas', 'admin_url': '/admin/topico2/consulta/', 'object_name': 'Consulta', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/topico2/diagnostico/add/', 'name': 'Diagnosticos', 'admin_url': '/admin/topico2/diagnostico/', 'object_name': 'Diagnostico', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/topico2/especificacionreceta/add/', 'name': 'EspecificacionRecetas', 'admin_url': '/admin/topico2/especificacionreceta/', 'object_name': 'EspecificacionReceta', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/topico2/medicamento/add/', 'name': 'Medicamentos', 'admin_url': '/admin/topico2/medicamento/', 'object_name': 'Medicamento', 'perms': {'add': True, 'delete': True, 'change': True}}, {'add_url': '/admin/topico2/tratamiento/add/', 'name': 'Tratamientos', 'admin_url': '/admin/topico2/tratamiento/', 'object_name': 'Tratamiento', 'perms': {'add': True, 'delete': True, 'change': True}}], 'app_label': 'topico2'}], 'title': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x0351ACF0>, 'LANGUAGE_CODE': 'en-us', 'site_url': '/'}]"
+[2016-11-20 00:40:41] DEBUG [django.db.backends:90] (0.001) SELECT "django_admin_log"."id", "django_admin_log"."action_time", "django_admin_log"."user_id", "django_admin_log"."content_type_id", "django_admin_log"."object_id", "django_admin_log"."object_repr", "django_admin_log"."action_flag", "django_admin_log"."change_message", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_admin_log" INNER JOIN "auths_user" ON ("django_admin_log"."user_id" = "auths_user"."id") LEFT OUTER JOIN "django_content_type" ON ("django_admin_log"."content_type_id" = "django_content_type"."id") WHERE "django_admin_log"."user_id" = '01e659bc77a5436f9fc859d23a77e6aa' ORDER BY "django_admin_log"."action_time" DESC LIMIT 10; args=('01e659bc77a5436f9fc859d23a77e6aa',)
+[2016-11-20 00:40:41] INFO [django.server:131] "GET /admin/ HTTP/1.1" 200 14314
+[2016-11-20 21:52:30] DEBUG [django.db.backends:90] (0.016) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[2016-11-20 21:52:30] DEBUG [django.db.backends:90] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[2016-11-20 21:52:57] DEBUG [django.db.backends:90] (0.016) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."session_key" = 'tte7gjfz4bmwgr3tggzw5o6r3ou1cyfi' AND "django_session"."expire_date" > '2016-11-21 02:52:57.349657'); args=('tte7gjfz4bmwgr3tggzw5o6r3ou1cyfi', '2016-11-21 02:52:57.349657')
+[2016-11-20 21:52:57] DEBUG [django.db.backends:90] (0.000) SELECT "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by" FROM "auths_user" WHERE "auths_user"."id" = '01e659bc77a5436f9fc859d23a77e6aa'; args=('01e659bc77a5436f9fc859d23a77e6aa',)
+[2016-11-20 21:52:57] DEBUG [django.template:929] Exception while resolving variable 'is_popup' in template 'admin/index.html'.
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\context.py", line 75, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in "[{'False': False, 'None': None, 'True': True}, {'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x04750EF0>, 'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x04756A50>>, 'request': <WSGIRequest: GET '/admin/'>, 'user': <SimpleLazyObject: <User: admin>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x04EBA9B0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'WARNING': 30, 'ERROR': 40, 'SUCCESS': 25}}, {}, {'has_permission': True, 'app_list': [{'has_module_perms': True, 'app_url': '/admin/auth/', 'models': [{'object_name': 'Group', 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E2AB50>, 'perms': {'add': True, 'change': True, 'delete': True}}, {'object_name': 'Permission', 'admin_url': '/admin/auth/permission/', 'add_url': '/admin/auth/permission/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E2A910>, 'perms': {'add': True, 'change': True, 'delete': True}}], 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03A30710>, 'app_label': 'auth'}, {'has_module_perms': True, 'app_url': '/admin/auths/', 'models': [{'object_name': 'HierarchyType', 'admin_url': '/admin/auths/hierarchytype/', 'add_url': '/admin/auths/hierarchytype/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E2A730>, 'perms': {'add': True, 'change': True, 'delete': True}}, {'object_name': 'Hierarchy', 'admin_url': '/admin/auths/hierarchy/', 'add_url': '/admin/auths/hierarchy/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E2AAF0>, 'perms': {'add': True, 'change': True, 'delete': True}}, {'object_name': 'Menu', 'admin_url': '/admin/auths/menu/', 'add_url': '/admin/auths/menu/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E2AA90>, 'perms': {'add': True, 'change': True, 'delete': True}}, {'object_name': 'Person', 'admin_url': '/admin/auths/person/', 'add_url': '/admin/auths/person/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E2AAB0>, 'perms': {'add': True, 'change': True, 'delete': True}}, {'object_name': 'UserHierarchyGroup', 'admin_url': '/admin/auths/userhierarchygroup/', 'add_url': '/admin/auths/userhierarchygroup/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E2AA30>, 'perms': {'add': True, 'change': True, 'delete': True}}, {'object_name': 'UserHierarchyPermission', 'admin_url': '/admin/auths/userhierarchypermission/', 'add_url': '/admin/auths/userhierarchypermission/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E2AC10>, 'perms': {'add': True, 'change': True, 'delete': True}}, {'object_name': 'User', 'admin_url': '/admin/auths/user/', 'add_url': '/admin/auths/user/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E2A970>, 'perms': {'add': True, 'change': True, 'delete': True}}], 'name': 'Auths', 'app_label': 'auths'}, {'has_module_perms': True, 'app_url': '/admin/contenttypes/', 'models': [{'object_name': 'ContentType', 'admin_url': '/admin/contenttypes/contenttype/', 'add_url': '/admin/contenttypes/contenttype/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E17ED0>, 'perms': {'add': True, 'change': True, 'delete': True}}], 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03A30830>, 'app_label': 'contenttypes'}, {'has_module_perms': True, 'app_url': '/admin/oauth2_provider/', 'models': [{'object_name': 'AccessToken', 'admin_url': '/admin/oauth2_provider/accesstoken/', 'add_url': '/admin/oauth2_provider/accesstoken/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E2A790>, 'perms': {'add': True, 'change': True, 'delete': True}}, {'object_name': 'Application', 'admin_url': '/admin/oauth2_provider/application/', 'add_url': '/admin/oauth2_provider/application/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E2A8F0>, 'perms': {'add': True, 'change': True, 'delete': True}}, {'object_name': 'Grant', 'admin_url': '/admin/oauth2_provider/grant/', 'add_url': '/admin/oauth2_provider/grant/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E17DB0>, 'perms': {'add': True, 'change': True, 'delete': True}}, {'object_name': 'RefreshToken', 'admin_url': '/admin/oauth2_provider/refreshtoken/', 'add_url': '/admin/oauth2_provider/refreshtoken/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E2A750>, 'perms': {'add': True, 'change': True, 'delete': True}}], 'name': 'Django OAuth Toolkit', 'app_label': 'oauth2_provider'}, {'has_module_perms': True, 'app_url': '/admin/topico2/', 'models': [{'object_name': 'Consulta', 'admin_url': '/admin/topico2/consulta/', 'add_url': '/admin/topico2/consulta/add/', 'name': 'Consultas', 'perms': {'add': True, 'change': True, 'delete': True}}, {'object_name': 'Diagnostico', 'admin_url': '/admin/topico2/diagnostico/', 'add_url': '/admin/topico2/diagnostico/add/', 'name': 'Diagnosticos', 'perms': {'add': True, 'change': True, 'delete': True}}, {'object_name': 'EspecificacionReceta', 'admin_url': '/admin/topico2/especificacionreceta/', 'add_url': '/admin/topico2/especificacionreceta/add/', 'name': 'EspecificacionRecetas', 'perms': {'add': True, 'change': True, 'delete': True}}, {'object_name': 'Medicamento', 'admin_url': '/admin/topico2/medicamento/', 'add_url': '/admin/topico2/medicamento/add/', 'name': 'Medicamentos', 'perms': {'add': True, 'change': True, 'delete': True}}, {'object_name': 'Tratamiento', 'admin_url': '/admin/topico2/tratamiento/', 'add_url': '/admin/topico2/tratamiento/add/', 'name': 'Tratamientos', 'perms': {'add': True, 'change': True, 'delete': True}}], 'name': 'Topico2', 'app_label': 'topico2'}], 'site_header': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03A1AC70>, 'available_apps': [{'has_module_perms': True, 'app_url': '/admin/auth/', 'models': [{'object_name': 'Group', 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E3FDF0>, 'perms': {'add': True, 'change': True, 'delete': True}}, {'object_name': 'Permission', 'admin_url': '/admin/auth/permission/', 'add_url': '/admin/auth/permission/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E3F670>, 'perms': {'add': True, 'change': True, 'delete': True}}], 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03A30710>, 'app_label': 'auth'}, {'has_module_perms': True, 'app_url': '/admin/auths/', 'models': [{'object_name': 'HierarchyType', 'admin_url': '/admin/auths/hierarchytype/', 'add_url': '/admin/auths/hierarchytype/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E3FC10>, 'perms': {'add': True, 'change': True, 'delete': True}}, {'object_name': 'Hierarchy', 'admin_url': '/admin/auths/hierarchy/', 'add_url': '/admin/auths/hierarchy/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E3FB10>, 'perms': {'add': True, 'change': True, 'delete': True}}, {'object_name': 'Menu', 'admin_url': '/admin/auths/menu/', 'add_url': '/admin/auths/menu/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E3F4F0>, 'perms': {'add': True, 'change': True, 'delete': True}}, {'object_name': 'Person', 'admin_url': '/admin/auths/person/', 'add_url': '/admin/auths/person/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E3F570>, 'perms': {'add': True, 'change': True, 'delete': True}}, {'object_name': 'UserHierarchyGroup', 'admin_url': '/admin/auths/userhierarchygroup/', 'add_url': '/admin/auths/userhierarchygroup/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E3F550>, 'perms': {'add': True, 'change': True, 'delete': True}}, {'object_name': 'UserHierarchyPermission', 'admin_url': '/admin/auths/userhierarchypermission/', 'add_url': '/admin/auths/userhierarchypermission/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E3FCD0>, 'perms': {'add': True, 'change': True, 'delete': True}}, {'object_name': 'User', 'admin_url': '/admin/auths/user/', 'add_url': '/admin/auths/user/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E3F6F0>, 'perms': {'add': True, 'change': True, 'delete': True}}], 'name': 'Auths', 'app_label': 'auths'}, {'has_module_perms': True, 'app_url': '/admin/contenttypes/', 'models': [{'object_name': 'ContentType', 'admin_url': '/admin/contenttypes/contenttype/', 'add_url': '/admin/contenttypes/contenttype/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E3FA30>, 'perms': {'add': True, 'change': True, 'delete': True}}], 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03A30830>, 'app_label': 'contenttypes'}, {'has_module_perms': True, 'app_url': '/admin/oauth2_provider/', 'models': [{'object_name': 'AccessToken', 'admin_url': '/admin/oauth2_provider/accesstoken/', 'add_url': '/admin/oauth2_provider/accesstoken/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E3F870>, 'perms': {'add': True, 'change': True, 'delete': True}}, {'object_name': 'Application', 'admin_url': '/admin/oauth2_provider/application/', 'add_url': '/admin/oauth2_provider/application/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E3F530>, 'perms': {'add': True, 'change': True, 'delete': True}}, {'object_name': 'Grant', 'admin_url': '/admin/oauth2_provider/grant/', 'add_url': '/admin/oauth2_provider/grant/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E3FE50>, 'perms': {'add': True, 'change': True, 'delete': True}}, {'object_name': 'RefreshToken', 'admin_url': '/admin/oauth2_provider/refreshtoken/', 'add_url': '/admin/oauth2_provider/refreshtoken/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E3FD10>, 'perms': {'add': True, 'change': True, 'delete': True}}], 'name': 'Django OAuth Toolkit', 'app_label': 'oauth2_provider'}, {'has_module_perms': True, 'app_url': '/admin/topico2/', 'models': [{'object_name': 'Consulta', 'admin_url': '/admin/topico2/consulta/', 'add_url': '/admin/topico2/consulta/add/', 'name': 'Consultas', 'perms': {'add': True, 'change': True, 'delete': True}}, {'object_name': 'Diagnostico', 'admin_url': '/admin/topico2/diagnostico/', 'add_url': '/admin/topico2/diagnostico/add/', 'name': 'Diagnosticos', 'perms': {'add': True, 'change': True, 'delete': True}}, {'object_name': 'EspecificacionReceta', 'admin_url': '/admin/topico2/especificacionreceta/', 'add_url': '/admin/topico2/especificacionreceta/add/', 'name': 'EspecificacionRecetas', 'perms': {'add': True, 'change': True, 'delete': True}}, {'object_name': 'Medicamento', 'admin_url': '/admin/topico2/medicamento/', 'add_url': '/admin/topico2/medicamento/add/', 'name': 'Medicamentos', 'perms': {'add': True, 'change': True, 'delete': True}}, {'object_name': 'Tratamiento', 'admin_url': '/admin/topico2/tratamiento/', 'add_url': '/admin/topico2/tratamiento/add/', 'name': 'Tratamientos', 'perms': {'add': True, 'change': True, 'delete': True}}], 'name': 'Topico2', 'app_label': 'topico2'}], 'LANGUAGE_BIDI': False, 'title': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03A1ACD0>, 'LANGUAGE_CODE': 'en-us', 'site_title': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03A1AC10>, 'site_url': '/'}]"
+[2016-11-20 21:52:57] DEBUG [django.template:929] Exception while resolving variable 'is_popup' in template 'admin/index.html'.
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\context.py", line 75, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in "[{'False': False, 'None': None, 'True': True}, {'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x04750EF0>, 'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x04756A50>>, 'request': <WSGIRequest: GET '/admin/'>, 'user': <SimpleLazyObject: <User: admin>>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x04EBA9B0>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'WARNING': 30, 'ERROR': 40, 'SUCCESS': 25}}, {}, {'has_permission': True, 'app_list': [{'has_module_perms': True, 'app_url': '/admin/auth/', 'models': [{'object_name': 'Group', 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E2AB50>, 'perms': {'add': True, 'change': True, 'delete': True}}, {'object_name': 'Permission', 'admin_url': '/admin/auth/permission/', 'add_url': '/admin/auth/permission/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E2A910>, 'perms': {'add': True, 'change': True, 'delete': True}}], 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03A30710>, 'app_label': 'auth'}, {'has_module_perms': True, 'app_url': '/admin/auths/', 'models': [{'object_name': 'HierarchyType', 'admin_url': '/admin/auths/hierarchytype/', 'add_url': '/admin/auths/hierarchytype/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E2A730>, 'perms': {'add': True, 'change': True, 'delete': True}}, {'object_name': 'Hierarchy', 'admin_url': '/admin/auths/hierarchy/', 'add_url': '/admin/auths/hierarchy/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E2AAF0>, 'perms': {'add': True, 'change': True, 'delete': True}}, {'object_name': 'Menu', 'admin_url': '/admin/auths/menu/', 'add_url': '/admin/auths/menu/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E2AA90>, 'perms': {'add': True, 'change': True, 'delete': True}}, {'object_name': 'Person', 'admin_url': '/admin/auths/person/', 'add_url': '/admin/auths/person/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E2AAB0>, 'perms': {'add': True, 'change': True, 'delete': True}}, {'object_name': 'UserHierarchyGroup', 'admin_url': '/admin/auths/userhierarchygroup/', 'add_url': '/admin/auths/userhierarchygroup/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E2AA30>, 'perms': {'add': True, 'change': True, 'delete': True}}, {'object_name': 'UserHierarchyPermission', 'admin_url': '/admin/auths/userhierarchypermission/', 'add_url': '/admin/auths/userhierarchypermission/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E2AC10>, 'perms': {'add': True, 'change': True, 'delete': True}}, {'object_name': 'User', 'admin_url': '/admin/auths/user/', 'add_url': '/admin/auths/user/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E2A970>, 'perms': {'add': True, 'change': True, 'delete': True}}], 'name': 'Auths', 'app_label': 'auths'}, {'has_module_perms': True, 'app_url': '/admin/contenttypes/', 'models': [{'object_name': 'ContentType', 'admin_url': '/admin/contenttypes/contenttype/', 'add_url': '/admin/contenttypes/contenttype/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E17ED0>, 'perms': {'add': True, 'change': True, 'delete': True}}], 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03A30830>, 'app_label': 'contenttypes'}, {'has_module_perms': True, 'app_url': '/admin/oauth2_provider/', 'models': [{'object_name': 'AccessToken', 'admin_url': '/admin/oauth2_provider/accesstoken/', 'add_url': '/admin/oauth2_provider/accesstoken/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E2A790>, 'perms': {'add': True, 'change': True, 'delete': True}}, {'object_name': 'Application', 'admin_url': '/admin/oauth2_provider/application/', 'add_url': '/admin/oauth2_provider/application/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E2A8F0>, 'perms': {'add': True, 'change': True, 'delete': True}}, {'object_name': 'Grant', 'admin_url': '/admin/oauth2_provider/grant/', 'add_url': '/admin/oauth2_provider/grant/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E17DB0>, 'perms': {'add': True, 'change': True, 'delete': True}}, {'object_name': 'RefreshToken', 'admin_url': '/admin/oauth2_provider/refreshtoken/', 'add_url': '/admin/oauth2_provider/refreshtoken/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E2A750>, 'perms': {'add': True, 'change': True, 'delete': True}}], 'name': 'Django OAuth Toolkit', 'app_label': 'oauth2_provider'}, {'has_module_perms': True, 'app_url': '/admin/topico2/', 'models': [{'object_name': 'Consulta', 'admin_url': '/admin/topico2/consulta/', 'add_url': '/admin/topico2/consulta/add/', 'name': 'Consultas', 'perms': {'add': True, 'change': True, 'delete': True}}, {'object_name': 'Diagnostico', 'admin_url': '/admin/topico2/diagnostico/', 'add_url': '/admin/topico2/diagnostico/add/', 'name': 'Diagnosticos', 'perms': {'add': True, 'change': True, 'delete': True}}, {'object_name': 'EspecificacionReceta', 'admin_url': '/admin/topico2/especificacionreceta/', 'add_url': '/admin/topico2/especificacionreceta/add/', 'name': 'EspecificacionRecetas', 'perms': {'add': True, 'change': True, 'delete': True}}, {'object_name': 'Medicamento', 'admin_url': '/admin/topico2/medicamento/', 'add_url': '/admin/topico2/medicamento/add/', 'name': 'Medicamentos', 'perms': {'add': True, 'change': True, 'delete': True}}, {'object_name': 'Tratamiento', 'admin_url': '/admin/topico2/tratamiento/', 'add_url': '/admin/topico2/tratamiento/add/', 'name': 'Tratamientos', 'perms': {'add': True, 'change': True, 'delete': True}}], 'name': 'Topico2', 'app_label': 'topico2'}], 'site_header': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03A1AC70>, 'available_apps': [{'has_module_perms': True, 'app_url': '/admin/auth/', 'models': [{'object_name': 'Group', 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E3FDF0>, 'perms': {'add': True, 'change': True, 'delete': True}}, {'object_name': 'Permission', 'admin_url': '/admin/auth/permission/', 'add_url': '/admin/auth/permission/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E3F670>, 'perms': {'add': True, 'change': True, 'delete': True}}], 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03A30710>, 'app_label': 'auth'}, {'has_module_perms': True, 'app_url': '/admin/auths/', 'models': [{'object_name': 'HierarchyType', 'admin_url': '/admin/auths/hierarchytype/', 'add_url': '/admin/auths/hierarchytype/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E3FC10>, 'perms': {'add': True, 'change': True, 'delete': True}}, {'object_name': 'Hierarchy', 'admin_url': '/admin/auths/hierarchy/', 'add_url': '/admin/auths/hierarchy/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E3FB10>, 'perms': {'add': True, 'change': True, 'delete': True}}, {'object_name': 'Menu', 'admin_url': '/admin/auths/menu/', 'add_url': '/admin/auths/menu/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E3F4F0>, 'perms': {'add': True, 'change': True, 'delete': True}}, {'object_name': 'Person', 'admin_url': '/admin/auths/person/', 'add_url': '/admin/auths/person/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E3F570>, 'perms': {'add': True, 'change': True, 'delete': True}}, {'object_name': 'UserHierarchyGroup', 'admin_url': '/admin/auths/userhierarchygroup/', 'add_url': '/admin/auths/userhierarchygroup/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E3F550>, 'perms': {'add': True, 'change': True, 'delete': True}}, {'object_name': 'UserHierarchyPermission', 'admin_url': '/admin/auths/userhierarchypermission/', 'add_url': '/admin/auths/userhierarchypermission/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E3FCD0>, 'perms': {'add': True, 'change': True, 'delete': True}}, {'object_name': 'User', 'admin_url': '/admin/auths/user/', 'add_url': '/admin/auths/user/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E3F6F0>, 'perms': {'add': True, 'change': True, 'delete': True}}], 'name': 'Auths', 'app_label': 'auths'}, {'has_module_perms': True, 'app_url': '/admin/contenttypes/', 'models': [{'object_name': 'ContentType', 'admin_url': '/admin/contenttypes/contenttype/', 'add_url': '/admin/contenttypes/contenttype/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E3FA30>, 'perms': {'add': True, 'change': True, 'delete': True}}], 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03A30830>, 'app_label': 'contenttypes'}, {'has_module_perms': True, 'app_url': '/admin/oauth2_provider/', 'models': [{'object_name': 'AccessToken', 'admin_url': '/admin/oauth2_provider/accesstoken/', 'add_url': '/admin/oauth2_provider/accesstoken/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E3F870>, 'perms': {'add': True, 'change': True, 'delete': True}}, {'object_name': 'Application', 'admin_url': '/admin/oauth2_provider/application/', 'add_url': '/admin/oauth2_provider/application/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E3F530>, 'perms': {'add': True, 'change': True, 'delete': True}}, {'object_name': 'Grant', 'admin_url': '/admin/oauth2_provider/grant/', 'add_url': '/admin/oauth2_provider/grant/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E3FE50>, 'perms': {'add': True, 'change': True, 'delete': True}}, {'object_name': 'RefreshToken', 'admin_url': '/admin/oauth2_provider/refreshtoken/', 'add_url': '/admin/oauth2_provider/refreshtoken/add/', 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04E3FD10>, 'perms': {'add': True, 'change': True, 'delete': True}}], 'name': 'Django OAuth Toolkit', 'app_label': 'oauth2_provider'}, {'has_module_perms': True, 'app_url': '/admin/topico2/', 'models': [{'object_name': 'Consulta', 'admin_url': '/admin/topico2/consulta/', 'add_url': '/admin/topico2/consulta/add/', 'name': 'Consultas', 'perms': {'add': True, 'change': True, 'delete': True}}, {'object_name': 'Diagnostico', 'admin_url': '/admin/topico2/diagnostico/', 'add_url': '/admin/topico2/diagnostico/add/', 'name': 'Diagnosticos', 'perms': {'add': True, 'change': True, 'delete': True}}, {'object_name': 'EspecificacionReceta', 'admin_url': '/admin/topico2/especificacionreceta/', 'add_url': '/admin/topico2/especificacionreceta/add/', 'name': 'EspecificacionRecetas', 'perms': {'add': True, 'change': True, 'delete': True}}, {'object_name': 'Medicamento', 'admin_url': '/admin/topico2/medicamento/', 'add_url': '/admin/topico2/medicamento/add/', 'name': 'Medicamentos', 'perms': {'add': True, 'change': True, 'delete': True}}, {'object_name': 'Tratamiento', 'admin_url': '/admin/topico2/tratamiento/', 'add_url': '/admin/topico2/tratamiento/add/', 'name': 'Tratamientos', 'perms': {'add': True, 'change': True, 'delete': True}}], 'name': 'Topico2', 'app_label': 'topico2'}], 'LANGUAGE_BIDI': False, 'title': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03A1ACD0>, 'LANGUAGE_CODE': 'en-us', 'site_title': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x03A1AC10>, 'site_url': '/'}]"
+[2016-11-20 21:52:57] DEBUG [django.db.backends:90] (0.000) SELECT "django_admin_log"."id", "django_admin_log"."action_time", "django_admin_log"."user_id", "django_admin_log"."content_type_id", "django_admin_log"."object_id", "django_admin_log"."object_repr", "django_admin_log"."action_flag", "django_admin_log"."change_message", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_admin_log" INNER JOIN "auths_user" ON ("django_admin_log"."user_id" = "auths_user"."id") LEFT OUTER JOIN "django_content_type" ON ("django_admin_log"."content_type_id" = "django_content_type"."id") WHERE "django_admin_log"."user_id" = '01e659bc77a5436f9fc859d23a77e6aa' ORDER BY "django_admin_log"."action_time" DESC LIMIT 10; args=('01e659bc77a5436f9fc859d23a77e6aa',)
+[2016-11-20 21:52:57] INFO [django.server:131] "GET /admin/ HTTP/1.1" 200 14314
+[2016-11-20 21:52:58] INFO [django.server:131] "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+[2016-11-20 21:52:58] INFO [django.server:131] "GET /static/admin/css/base.css HTTP/1.1" 304 0
+[2016-11-20 21:52:58] INFO [django.server:131] "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+[2016-11-20 21:52:58] INFO [django.server:131] "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+[2016-11-20 21:52:58] INFO [django.server:131] "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+[2016-11-20 21:52:58] INFO [django.server:131] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 304 0
+[2016-11-20 21:52:58] INFO [django.server:131] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 304 0
+[2016-11-20 21:52:58] INFO [django.server:131] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 304 0
+[2016-11-20 21:52:58] DEBUG [django.template:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'D:\\yuri\\medicfastv2\\ve_medicfast\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'D:\\yuri\\medicfastv2\\ve_medicfast\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'D:\\yuri\\medicfastv2\\ve_medicfast\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'medicfastv2_service_apps.auths_api.urls' from 'D:\\yuri\\medicfastv2\\medicfastv2_service\\medicfastv2_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[2016-11-20 21:52:58] DEBUG [django.template:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'D:\\yuri\\medicfastv2\\ve_medicfast\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'D:\\yuri\\medicfastv2\\ve_medicfast\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'D:\\yuri\\medicfastv2\\ve_medicfast\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'medicfastv2_service_apps.auths_api.urls' from 'D:\\yuri\\medicfastv2\\medicfastv2_service\\medicfastv2_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'D:\\\\yuri\\\\medicfastv2\\\\ve_medicfast\\\\lib\\\\site-packages\\\\django\\\\contrib\\\\admindocs\\\\urls.py'> (None:None) ^admin/doc/>"
+[2016-11-20 21:52:58] DEBUG [django.template:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'D:\\yuri\\medicfastv2\\ve_medicfast\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'D:\\yuri\\medicfastv2\\ve_medicfast\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'D:\\yuri\\medicfastv2\\ve_medicfast\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'medicfastv2_service_apps.auths_api.urls' from 'D:\\yuri\\medicfastv2\\medicfastv2_service\\medicfastv2_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'rest_framework.urls' from 'D:\\\\yuri\\\\medicfastv2\\\\ve_medicfast\\\\lib\\\\site-packages\\\\rest_framework\\\\urls.py'> (rest_framework:rest_framework) ^api-auth/>"
+[2016-11-20 21:52:58] DEBUG [django.template:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'D:\\yuri\\medicfastv2\\ve_medicfast\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'D:\\yuri\\medicfastv2\\ve_medicfast\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'D:\\yuri\\medicfastv2\\ve_medicfast\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'medicfastv2_service_apps.auths_api.urls' from 'D:\\yuri\\medicfastv2\\medicfastv2_service\\medicfastv2_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'oauth2_provider.urls' from 'D:\\\\yuri\\\\medicfastv2\\\\ve_medicfast\\\\lib\\\\site-packages\\\\oauth2_provider\\\\urls.py'> (None:oauth2_provider) ^o/>"
+[2016-11-20 21:52:58] DEBUG [django.template:929] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\core\handlers\base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'D:\\yuri\\medicfastv2\\ve_medicfast\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'D:\\yuri\\medicfastv2\\ve_medicfast\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'D:\\yuri\\medicfastv2\\ve_medicfast\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'medicfastv2_service_apps.auths_api.urls' from 'D:\\yuri\\medicfastv2\\medicfastv2_service\\medicfastv2_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yuri\medicfastv2\ve_medicfast\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'medicfastv2_service_apps.auths_api.urls' from 'D:\\\\yuri\\\\medicfastv2\\\\medicfastv2_service\\\\medicfastv2_service_apps\\\\auths_api\\\\urls.py'> (None:None) ^api/auths/>"
+[2016-11-20 21:52:58] WARNING [django.request:152] Not Found: /favicon.ico
+[2016-11-20 21:52:58] WARNING [django.server:131] "GET /favicon.ico HTTP/1.1" 404 2381

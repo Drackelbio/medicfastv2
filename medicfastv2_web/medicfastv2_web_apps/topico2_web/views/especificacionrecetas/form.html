@@ -1,0 +1,108 @@
+<div ng-cloak>
+    <md-content class="md-padding" layout-xs="column" layout="row">
+        <div flex-xs flex-gt-xs="100" layout="column">
+            <form name="dForm" role="form" ng-controller="EspecificacionrecetaSaveCtrl"> 
+                <md-card>
+                    <md-card-header>
+                        <md-card-avatar>
+                            <img class="md-user-avatar" src="media/img/his.jpg" />
+                        </md-card-avatar>
+                        <md-card-header-text>
+                           
+                            <span class="md-headline">Recetas Suministradas</span>
+                            <span class="md-subhead">Registrar Recetas</span>
+                        </md-card-header-text>
+                    </md-card-header>
+
+                    <md-divider></md-divider>
+                    <md-card-content>
+                        <div layout-gt-sm="row">
+                            
+                            <md-input-container class="md-block" flex-gt-sm>
+                              
+                                <input placeholder="Cantidad " name="cantidad" ng-model="especificacionreceta.cantidad" required>
+                                <div ng-messages="dForm.cantidad.$error">
+                                    <div ng-message="required">This is required.</div>
+                                </div>
+                            </md-input-container>
+                            <md-divider></md-divider>                     
+                            
+                           
+                            <md-input-container class="md-block" flex-gt-sm>
+                              
+                                <input placeholder="Dosis a tomar" name="dosis" ng-model="especificacionreceta.dosis" required>
+                                <div ng-messages="dForm.dosis.$error">
+                                    <div ng-message="required">This is required.</div>
+                                </div>
+                            </md-input-container>
+                             <md-divider></md-divider> 
+                         
+                            <md-input-container class="md-block"  flex-gt-sm >
+                              
+                                <input placeholder="periodo:" name="periodo" ng-model="especificacionreceta.periodo" required>
+                                <div ng-messages="dForm.periodo.$error">
+                                    <div ng-message="required">This is required.</div>
+                                </div>
+                            </md-input-container>
+
+
+                            </div>
+                             <div layout-gt-sm="row">
+
+                             <md-input-container class="md-block"  flex-gt-sm>
+                              
+                                <input placeholder="Recomendaciones" name="recomendacion" ng-model="especificacionreceta.recomendacion" required>
+                                <div ng-messages="dForm.recomendacion.$error">
+                                    <div ng-message="required">This is required.</div>
+                                </div>
+                            </md-input-container>
+
+                              </div>
+
+                               <div layout-gt-sm="row">
+
+                             
+
+                             <md-input-container class="md-block"  flex-gt-sm>
+                              
+                                <input placeholder="importe por C/U" name="importe" ng-model="especificacionreceta.importe" required>
+                                <div ng-messages="dForm.importe.$error">
+                                    <div ng-message="required">This is required.</div>
+                                </div>
+                            </md-input-container>
+                            <md-divider></md-divider>
+
+                            <md-input-container class="md-block"  flex-gt-sm>
+                              
+                                <input placeholder="precio de venta" name="precio_venta" ng-model="especificacionreceta.precio_venta" required>
+                                <div ng-messages="dForm.precio_venta.$error">
+                                    <div ng-message="required">This is required.</div>
+                                </div>
+                            </md-input-container>
+
+
+
+                        </div>   
+                                         
+
+
+
+                    </md-card-content>
+                    <md-divider></md-divider>
+                    <md-card-actions layout="row" layout-xs="column" layout-align="start center">
+                        <md-card-icon-actions>
+                            <md-button class="md-icon-button" aria-label="toggle">
+                                <md-icon md-svg-icon="md-toggle-arrow"></md-icon>
+                            </md-button>
+                        </md-card-icon-actions>
+                        <md-button type="reset" ng-click="cancel()" class="md-raised">Cancelar</md-button>
+                        <md-button type="submit" ng-click="save()" class="md-raised md-primary">
+                            <span ng-show="especificacionreceta.id == null">Crear</span>
+                            <span ng-show="especificacionreceta.id">Actualizar</span>
+                        </md-button>
+                    </md-card-actions>
+                </md-card>
+            </form>
+        </div>
+    </md-content>
+</div>

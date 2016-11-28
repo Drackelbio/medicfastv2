@@ -1,18 +1,17 @@
 {
   "name": "web",
-  "description": "app web",
-  "main": "index.js",
-  "authors": [
-    "centro-medico"
-  ],
-  "license": "ISC",
-  "keywords": [
-    "django",
-    "angular",
-    "material",
-    "ux"
-  ],
   "homepage": "index.html",
+  "authors": [
+    "asullom"
+  ],
+  "description": "web app",
+  "main": "index.html",
+  "keywords": [
+    "angular",
+    "material"
+  ],
+  "license": "MIT",
+  "private": true,
   "ignore": [
     "**/.*",
     "node_modules",
@@ -21,17 +20,13 @@
     "tests"
   ],
   "dependencies": {
-    "angular-animate": "^1.5.5",
-    "angular-aria": "^1.5.5",
-    "angular-local-storage": "^0.2.7",
-    "angular-material-icons": "^0.7.0",
-    "angular-material": "^1.0.9",
-    "angular-messages": "^1.5.5",
-    "angular-sanitize": "^1.5.5",
-    "angular-toastr": "^1.7.0",
-    "angular-ui-router": "^0.3.0",
-    "angular": "^1.5.5",
-    "angularytics": "^0.4.0",
-    "angular-resource": "^1.5.5"
+    "angular": "^1.5.8",
+    "angular-ui-router": "^0.3.1",
+    "angular-material": "^1.1.1",
+    "angular-local-storage": "^0.5.2",
+    "angular-material-icons": "^0.7.1",
+    "angular-sanitize": "^1.5.8",
+    "angular-resource": "^1.5.8",
+    "angular-toastr": "^2.1.1"
   }
 }

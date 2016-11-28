@@ -1,0 +1,67 @@
+<div ng-cloak>
+    <md-content class="md-padding" layout-xs="column" layout="row">
+        <div flex-xs flex-gt-xs="100" layout="column">
+            <form name="dForm" role="form" ng-controller="TratamientoSaveCtrl"> 
+                <md-card>
+                    <md-card-header>
+                        <md-card-avatar>
+                            <img class="md-user-avatar" src="media/img/his.jpg" />
+                        </md-card-avatar>
+                        <md-card-header-text>
+                           
+                            <span class="md-headline">Tratamiento</span>
+                            <span class="md-subhead"> registrar proceso de tratamiento</span>
+                        </md-card-header-text>
+                    </md-card-header>
+                    <md-card-content>
+                        <div layout-gt-sm="row">
+                            
+                            <md-input-container class="md-block" flex-gt-sm>
+                                <label> Diagnostico</label>
+                                <input name="diagnostico" ng-model="tratamiento.diagnostico" required>
+                                <div ng-messages="dForm.diagnostico.$error">
+                                    <div ng-message="required">This is required.</div>
+                                </div>
+                            </md-input-container>
+                        </div>
+                       <md-input-container class="md-block" flex-gt-sm>
+                                <label>Periodo descanso</label>
+                                <input name="periododescanso" ng-model="tratamiento.periododescanso">
+                               
+                            </md-input-container>
+                                       
+
+                        <md-input-container class="md-block" flex-gt-sm>
+                                <label>Proxima cita</label>
+                                <md-datepicker name="citafecha" ng-model="tratamiento.citafecha"></md-datepicker>
+                                <div ng-messages="dForm.citafecha.$error">
+                                    <div ng-message="valid">Not a valid date!.</div>
+                                </div>
+                            </md-input-container>
+
+                        <md-input-container class="md-block">
+                            <md-checkbox ng-model="tratamiento.aministracion" aria-label="aministracion">
+                                Fue administrado
+                            </md-checkbox>
+                        </md-input-container>
+
+
+                    </md-card-content>
+                    <md-divider></md-divider>
+                    <md-card-actions layout="row" layout-xs="column" layout-align="start center">
+                        <md-card-icon-actions>
+                            <md-button class="md-icon-button" aria-label="toggle">
+                                <md-icon md-svg-icon="md-toggle-arrow"></md-icon>
+                            </md-button>
+                        </md-card-icon-actions>
+                        <md-button type="reset" ng-click="cancel()" class="md-raised">Cancelar</md-button>
+                        <md-button type="submit" ng-click="save()" class="md-raised md-primary">
+                            <span ng-show="tratamiento.id == null">Crear</span>
+                            <span ng-show="tratamiento.id">Actualizar</span>
+                        </md-button>
+                    </md-card-actions>
+                </md-card>
+            </form>
+        </div>
+    </md-content>
+</div>
